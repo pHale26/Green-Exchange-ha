@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Exchange - Trạm Đổi Xanh Thanh Hóa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased overflow-x-hidden">
+    <nav id="mainNav" class="navbar">
+        <div class="max-w-7xl mx-auto px-4 w-full flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <!-- Hand-drawn leaf logo -->
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" class="flex-shrink-0">
+                    <circle cx="19" cy="19" r="18" fill="#2d5a37" stroke="#3a2e1e" stroke-width="2"/>
+                    <path d="M19 28 C14 24 10 18 14 12 C18 8 24 10 26 14 C28 19 24 26 19 28Z" fill="#a8c5a0" stroke="#3a2e1e" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M19 28 Q16 20 18 12" stroke="#3a2e1e" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span class="font-extrabold text-2xl text-[#2d5a37] typewriter-font">Green Exchange</span>
+            </div>
+            <ul class="hidden md:flex items-center gap-6 nav-links">
+                <li><a href="#values">The Exchange</a></li>
+                <li><a href="#exchange-rules">Quy đổi</a></li>
+                <li><a href="#story">The Story</a></li>
+                <li><a href="#schedule">The Map</a></li>
+                <li><a href="#guide">How-to</a></li>
+                <li><a href="#volunteer">Join Us</a></li>
+            </ul>
+            <a href="#volunteer" class="btn hidden md:inline-block">Bắt đầu hành trình</a>
+        </div>
+    </nav>
+
+    <!-- Hero Slideshow -->
+    <header id="hero" class="relative h-[92vh] w-full overflow-hidden">
+        <!-- Swiper Container -->
+        <div class="swiper heroSwiper h-full w-full absolute inset-0 z-10">
+            <div class="swiper-wrapper h-full">
+                <!-- Slide 1 -->
+                <div class="swiper-slide bg-[url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center flex items-center justify-center text-center relative h-full">
+                    <div class="absolute inset-0 bg-[#2d5a37]/55 z-0"></div>
+                    <div class="relative z-10 max-w-4xl mx-auto px-6 mt-16 py-12">
+                        <div class="inline-block bg-[#e8d5b0] border-2 border-[#3a2e1e] px-5 py-2 mb-6 transform -rotate-2 shadow-[3px_3px_0_rgba(45,90,55,0.4)]" style="border-radius:255px 12px 225px 12px/12px 225px 12px 255px">
+                            <p class="handwriting text-2xl text-[#2d5a37] font-bold">Lời chào từ Trạm Xanh</p>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-[#f5ede1] drop-shadow-lg">Gom chút cũ kỹ,<br>nảy mầm tin yêu</h1>
+                        <a href="#values" class="btn bg-[#e8d5b0] !text-[#2d5a37] border-[#2d5a37] hover:bg-[#a8c5a0]">Bắt đầu hành trình</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide bg-[url('https://png.pngtree.com/png-vector/20251222/ourlarge/pngtree-colorful-plastic-bottle-chaos-highlighting-pollution-issue-png-image_18279561.webp')] bg-cover bg-center flex items-center justify-center text-center relative h-full">
+                    <div class="absolute inset-0 bg-[#3a2e1e]/50 z-0"></div>
+                    <div class="relative z-10 max-w-4xl mx-auto px-6 mt-16 py-12">
+                        <div class="inline-block bg-[#a8c5a0] border-2 border-[#2d5a37] px-5 py-2 mb-6 transform rotate-2 shadow-[3px_3px_0_#2d5a37]" style="border-radius:255px 12px 225px 12px/12px 225px 12px 255px">
+                            <p class="handwriting text-2xl text-[#2d5a37] font-bold">Mùa Hè Xanh — Đổi Rác Lấy Cây</p>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-[#f5ede1] drop-shadow-lg">Đổi chai nhựa,<br>nhận sen đá mini</h1>
+                        <a href="#exchange-rules" class="btn bg-[#2d5a37] !text-[#e8d5b0] hover:bg-[#5c8c5e]">Xem luật quy đổi</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide bg-[url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center flex items-center justify-center text-center relative h-full">
+                    <div class="absolute inset-0 bg-[#2d5a37]/60 z-0"></div>
+                    <div class="relative z-10 max-w-4xl mx-auto px-6 mt-16 py-12">
+                        <div class="inline-block bg-[#e8d5b0] border-2 border-[#3a2e1e] px-5 py-2 mb-6 transform -rotate-1 shadow-[3px_3px_0_#3a2e1e]" style="border-radius:255px 12px 225px 12px/12px 225px 12px 255px">
+                            <p class="handwriting text-2xl text-[#3a2e1e] font-bold">Chia sẻ tri thức — Trao Sách Cũ</p>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-[#f5ede1] drop-shadow-lg">Trao sách cũ,<br>gửi vạn yêu thương</h1>
+                        <a href="#story" class="btn bg-[#e8d5b0] !text-[#3a2e1e] hover:bg-[#c9a96e]">Đọc câu chuyện</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Custom Swiper Navigation -->
+            <div class="swiper-button-next !text-[#2d5a37] !font-bold bg-[#e8d5b0]/90 w-12 h-12 rounded-full border-2 border-[#2d5a37] hover:bg-[#a8c5a0] transition-all shadow-[2px_2px_0px_#2d5a37] hidden md:flex items-center justify-center after:text-xl transform hover:scale-110"></div>
+            <div class="swiper-button-prev !text-[#2d5a37] !font-bold bg-[#e8d5b0]/90 w-12 h-12 rounded-full border-2 border-[#2d5a37] hover:bg-[#a8c5a0] transition-all shadow-[2px_2px_0px_#2d5a37] hidden md:flex items-center justify-center after:text-xl transform hover:scale-110"></div>
+            <div class="swiper-pagination !bottom-4 lg:!bottom-8"></div>
+        </div>
+    </header>
+
+    <!-- Thành Tựu (Counter Section) -->
+    <section id="achievements" class="py-12 relative border-y-4 border-dashed border-[#2d5a37] bg-[#2d5a37]/5">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/lined-paper-2.png')] opacity-40"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x-4 divide-dashed divide-[#2d5a37]">
+                <div class="p-4 group">
+                    <div class="text-6xl mb-4 transform transition-transform group-hover:scale-125 group-hover:rotate-12 inline-block drop-shadow-md">
+                        <svg class="w-16 h-16 text-[#5c4a3d] drop-shadow-md inline-block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M10 5l1-3h2l1 3M4 8h16l-2 14H6z"/><path d="M12 11v8M8 11v8M16 11v8"/></svg>
+                    </div>
+                    <div class="text-5xl font-extrabold text-[#2d5a37] mb-2 font-serif"><span data-counter data-target="2540">0</span><span class="text-3xl text-[#5c8c5e]">+</span></div>
+                    <p class="text-2xl handwriting font-bold text-[#5c4a2e]">Kg Rác Tái Chế</p>
+                </div>
+                <div class="p-4 group">
+                    <div class="text-6xl mb-4 transform transition-transform group-hover:scale-125 group-hover:-rotate-12 inline-block drop-shadow-md">
+                        <svg class="w-16 h-16 inline-block" fill="none" stroke="#3a2e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 11c-2-3-6-3-6 1 0 4 6 6 6 6s6-2 6-6c0-4-4-4-6-1z" fill="#a8c5a0"></path><path d="M12 11V7"></path><path d="M7 11h10l-1 9H8l-1-9z" fill="#c9a96e"></path></svg>
+                    </div>
+                    <div class="text-5xl font-extrabold text-[#2d5a37] mb-2 font-serif"><span data-counter data-target="1820">0</span><span class="text-3xl text-[#5c8c5e]">+</span></div>
+                    <p class="text-2xl handwriting font-bold text-[#5c4a2e]">Cành Mầm Đã Trao</p>
+                </div>
+                <div class="p-4 group">
+                    <div class="text-6xl mb-4 transform transition-transform group-hover:scale-125 group-hover:rotate-12 inline-block drop-shadow-md">
+                        <svg class="w-16 h-16 inline-block" fill="none" stroke="#3a2e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" fill="#e8d5b0"></path></svg>
+                    </div>
+                    <div class="text-5xl font-extrabold text-[#2d5a37] mb-2 font-serif"><span data-counter data-target="3200">0</span><span class="text-3xl text-[#5c8c5e]">+</span></div>
+                    <p class="text-2xl handwriting font-bold text-[#5c4a2e]">Sách Tới Vùng Cao</p>
+                </div>
+                <div class="p-4 group">
+                    <div class="text-6xl mb-4 transform transition-transform group-hover:scale-125 group-hover:-rotate-12 inline-block drop-shadow-md">
+                        <svg class="w-16 h-16 inline-block" fill="none" stroke="#3a2e1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" fill="#a8c5a0"></path><circle cx="9" cy="7" r="4" fill="#e8d5b0"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <div class="text-5xl font-extrabold text-[#2d5a37] mb-2 font-serif"><span data-counter data-target="150">0</span><span class="text-3xl text-[#5c8c5e]">+</span></div>
+                    <p class="text-2xl handwriting font-bold text-[#5c4a2e]">Tình Nguyện Viên</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="wavy-divider"></div>
+
+    <!-- Section 2: The Exchange -->
+    <section id="values" class="section py-16 relative" style="background-color:#2d5a37">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/paper.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-[#e8d5b0]">Bạn có gì? Trạm có gì?</h2>
+            <p class="handwriting text-2xl text-center text-[#a8c5a0] mb-14">Một vòng trao – nhận đáng yêu</p>
+
+            <div class="flex flex-col md:flex-row items-stretch justify-between gap-8 relative">
+                <!-- Cột Trái: Paper bag style -->
+                <div class="w-full md:w-5/12 bg-[#e8d5b0] border-2 border-[#3a2e1e] p-8 relative transform rotate-1 shadow-[5px_5px_0_rgba(45,90,55,0.5)]" style="border-radius:4px 255px 4px 255px/255px 4px 255px 4px">
+                    <!-- brown kraft top fold -->
+                    <div class="absolute -top-4 left-4 right-4 h-5 bg-[#c9a96e] border border-[#3a2e1e] rounded-sm"></div>
+                    <h3 class="text-3xl handwriting mb-6 text-center text-[#2d5a37] border-b-2 border-dashed border-[#2d5a37] pb-2 mt-2">Bạn trao đi...</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-4">
+                            <!-- Doodle: newspaper roll -->
+                            <svg class="w-14 h-14 flex-shrink-0" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                                <rect x="6" y="8" width="30" height="36" rx="3" fill="#c9a96e" stroke="#3a2e1e"/>
+                                <rect x="12" y="6" width="30" height="36" rx="3" fill="#e8d5b0" stroke="#3a2e1e"/>
+                                <line x1="18" y1="16" x2="36" y2="16"/><line x1="18" y1="22" x2="36" y2="22"/>
+                                <line x1="18" y1="28" x2="28" y2="28"/>
+                            </svg>
+                            <p class="font-semibold text-lg text-[#3a2e1e]">Giấy báo, bìa carton cũ</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <!-- Doodle: plastic bottle -->
+                            <svg class="w-14 h-14 flex-shrink-0" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                                <path d="M17 10 h14 v4 l3 5 v20 a3 3 0 0 1-3 3 H17 a3 3 0 0 1-3-3 V19 l3-5 z" fill="#a8c5a0"/>
+                                <rect x="19" y="6" width="10" height="5" rx="2" fill="#2d5a37"/>
+                                <line x1="14" y1="26" x2="34" y2="26" stroke-dasharray="2 3"/>
+                            </svg>
+                            <p class="font-semibold text-lg text-[#3a2e1e]">Vỏ chai nhựa, lon nhôm</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <!-- Doodle: open book -->
+                            <svg class="w-14 h-14 flex-shrink-0" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                                <path d="M24 38 C18 34 8 33 4 35 V14 C8 12 18 13 24 17 C30 13 40 12 44 14 V35 C40 33 30 34 24 38Z" fill="#e8d5b0"/>
+                                <line x1="24" y1="17" x2="24" y2="38"/>
+                                <line x1="10" y1="20" x2="22" y2="19"/><line x1="10" y1="25" x2="22" y2="24"/>
+                                <line x1="26" y1="19" x2="38" y2="20"/><line x1="26" y1="24" x2="38" y2="25"/>
+                            </svg>
+                            <p class="font-semibold text-lg text-[#3a2e1e]">Sách truyện, SGK còn tốt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exchange arrow centre -->
+                <div class="w-full md:w-2/12 flex flex-col items-center justify-center py-8 gap-3">
+                    <p class="handwriting text-2xl text-center text-[#e8d5b0] font-bold">Sự trao đổi của<br>hạnh phúc</p>
+                    <svg width="80" height="50" viewBox="0 0 80 50" fill="none">
+                        <path d="M10 15 Q30 5 50 15 Q70 25 70 25" stroke="#e8d5b0" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M60 18 L70 25 L60 32" stroke="#e8d5b0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M70 35 Q50 45 30 35 Q10 25 10 25" stroke="#a8c5a0" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
+                        <path d="M20 28 L10 35 L20 42" stroke="#a8c5a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <!-- Cột Phải: Kraft bag style -->
+                <div class="w-full md:w-5/12 bg-[#f5ede1] border-2 border-[#3a2e1e] p-8 relative transform -rotate-1 shadow-[5px_5px_0_rgba(201,169,110,0.6)]" style="border-radius:255px 4px 255px 4px/4px 255px 4px 255px">
+                    <div class="absolute -top-4 left-4 right-4 h-5 bg-[#a8c5a0] border border-[#2d5a37] rounded-sm"></div>
+                    <h3 class="text-3xl handwriting mb-6 text-center text-[#2d5a37] border-b-2 border-dashed border-[#2d5a37] pb-2 mt-2">Trạm gửi lại...</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-4">
+                            <!-- Doodle: succulent in pot -->
+                            <svg class="w-14 h-14 flex-shrink-0" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                                <ellipse cx="24" cy="20" rx="8" ry="10" fill="#a8c5a0"/>
+                                <ellipse cx="15" cy="25" rx="6" ry="7" fill="#5c8c5e"/>
+                                <ellipse cx="33" cy="25" rx="6" ry="7" fill="#5c8c5e"/>
+                                <rect x="16" y="33" width="16" height="10" rx="2" fill="#c9a96e" stroke="#3a2e1e"/>
+                            </svg>
+                            <p class="font-semibold text-lg text-[#3a2e1e]">Chậu sen đá mini dễ chăm</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <!-- Doodle: seed packet -->
+                            <svg class="w-14 h-14 flex-shrink-0" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                                <rect x="8" y="12" width="32" height="24" rx="3" fill="#e8d5b0"/>
+                                <path d="M8 20 h32" stroke-dasharray="2 2"/>
+                                <ellipse cx="24" cy="30" rx="7" ry="5" fill="#a8c5a0"/>
+                                <path d="M24 25 Q20 20 16 18 M24 25 Q28 20 32 18" stroke="#2d5a37" stroke-width="1.5"/>
+                            </svg>
+                            <p class="font-semibold text-lg text-[#3a2e1e]">Hạt giống hoa theo mùa</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <!-- Doodle: smiling children book -->
+                            <svg class="w-14 h-14 flex-shrink-0" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 48 48">
+                                <circle cx="24" cy="20" r="12" fill="#c9a96e"/>
+                                <path d="M19 22 Q24 27 29 22" stroke-width="2"/>
+                                <circle cx="20" cy="18" r="1.5" fill="#3a2e1e"/>
+                                <circle cx="28" cy="18" r="1.5" fill="#3a2e1e"/>
+                                <path d="M14 36 Q24 32 34 36" stroke-width="2"/>
+                            </svg>
+                            <p class="font-semibold text-lg text-[#3a2e1e]">Niềm vui cho em nhỏ vùng cao</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wavy-divider" style="transform: scaleY(-1);"></div>
+
+    <!-- Bảng Quy Đổi Chi Tiết -->
+    <section id="exchange-rules" class="section py-16 relative" style="background:#f5ede1">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/rice-paper.png')] opacity-30"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="relative overflow-hidden border-4 border-[#2d5a37] shadow-[8px_8px_0_#2d5a37] bg-[#fdfaf5]" style="border-radius:4px 255px 4px 255px/255px 4px 255px 4px">
+                <!-- Washi tape clip -->
+                <div class="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-5 bg-[#a8c5a0]/70 transform -rotate-2 border border-[#2d5a37]/30 shadow-sm"></div>
+                
+                <h2 class="text-4xl font-bold text-center mt-6 mb-2 text-[#2d5a37]">Nhật Ký Gieo Mầm</h2>
+                <p class="text-center text-xl handwriting mb-12 text-[#8b7355]">&ldquo;Gom bao nhiêu rác, đổi quà thế nào?&rdquo;</p>
+
+                <div class="relative py-8">
+                    <!-- Đường gân lá trung tâm -->
+                    <div id="leaf-vein" class="absolute left-1/2 top-0 w-0.5 bg-[#2d5a37] border-l-2 border-dashed border-[#2d5a37]/40 h-full -translate-x-1/2 origin-top transition-transform duration-500 ease-out" style="transform:scaleY(0)"></div>
+
+                    <div class="space-y-14">
+
+                        <!-- Rule 1: Giấy → Hạt giống -->
+                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
+                            <div class="w-5/12 text-right pr-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-2 group-hover:-rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#e8d5b0">
+                                    <!-- SVG: báo cũ cuộn -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <rect x="6" y="10" width="28" height="30" rx="2" fill="#fdfaf5" stroke="#3a2e1e"/>
+                                        <line x1="11" y1="17" x2="29" y2="17"/>
+                                        <line x1="11" y1="22" x2="29" y2="22"/>
+                                        <line x1="11" y1="27" x2="22" y2="27"/>
+                                        <path d="M34 10 C42 10 42 40 34 40" stroke="#2d5a37" fill="none"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">2kg Giấy vụn / Báo cũ</strong>
+                                </div>
+                            </div>
+                            <!-- Nhánh -->
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full"></div>
+                            <div class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2d5a37] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="#e8d5b0" stroke="#e8d5b0" viewBox="0 0 16 16"><path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z"/></svg>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2"></div>
+                            <div class="w-5/12 pl-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-1 group-hover:rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#d5e8d4">
+                                    <!-- SVG: hạt giống -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <ellipse cx="24" cy="28" rx="10" ry="8" fill="#a8c5a0"/>
+                                        <path d="M24 28 Q22 18 24 10" stroke="#2d5a37"/>
+                                        <path d="M24 18 Q18 14 14 16" stroke="#5c8c5e"/>
+                                        <path d="M24 22 Q30 18 34 20" stroke="#5c8c5e"/>
+                                        <circle cx="24" cy="10" r="3" fill="#c9a96e"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">01 Gói hạt giống hoa</strong>
+                                    <p class="text-sm handwriting text-[#5c4a2e]">(Cúc / Hướng dương)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 2: Carton → Sen đá -->
+                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
+                            <div class="w-5/12 text-right pr-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-2 group-hover:rotate-1 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#e8d5b0">
+                                    <!-- SVG: hộp carton -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <path d="M8 20 L8 40 L40 40 L40 20" fill="#c9a96e" stroke="#3a2e1e"/>
+                                        <path d="M4 14 L24 8 L44 14 L40 20 L8 20 Z" fill="#e8d5b0" stroke="#3a2e1e"/>
+                                        <path d="M24 8 L24 20" stroke="#3a2e1e"/>
+                                        <path d="M16 20 L16 30" stroke="#3a2e1e" stroke-dasharray="2 2"/>
+                                        <path d="M32 20 L32 30" stroke="#3a2e1e" stroke-dasharray="2 2"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">5kg Bìa carton</strong>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full"></div>
+                            <div class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2d5a37] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="#e8d5b0" stroke="#e8d5b0" viewBox="0 0 16 16"><path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z"/></svg>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2"></div>
+                            <div class="w-5/12 pl-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-2 group-hover:-rotate-1 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#d5e8d4">
+                                    <!-- SVG: chậu sen đá -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <path d="M16 36 L14 44 L34 44 L32 36 Z" fill="#c9a96e" stroke="#3a2e1e"/>
+                                        <ellipse cx="24" cy="36" rx="10" ry="4" fill="#a8c5a0" stroke="#2d5a37"/>
+                                        <path d="M24 36 L24 26" stroke="#2d5a37"/>
+                                        <path d="M24 30 Q18 26 16 20" stroke="#5c8c5e"/>
+                                        <path d="M24 30 Q30 26 32 20" stroke="#5c8c5e"/>
+                                        <path d="M24 26 Q20 22 20 16" stroke="#a8c5a0"/>
+                                        <path d="M24 26 Q28 22 28 16" stroke="#a8c5a0"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">01 Chậu Sen đá mini</strong>
+                                    <p class="text-sm handwriting text-[#5c4a2e]">(Vỉ vạn thọ)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 3: Chai nhựa → Bookmark -->
+                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
+                            <div class="w-5/12 text-right pr-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-1 group-hover:-rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#e8d5b0">
+                                    <!-- SVG: chai nhựa -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <path d="M18 12 L18 8 L30 8 L30 12 Q34 16 34 22 L34 40 Q34 44 24 44 Q14 44 14 40 L14 22 Q14 16 18 12Z" fill="#a8c5a0" stroke="#2d5a37"/>
+                                        <line x1="14" y1="26" x2="34" y2="26" stroke="#fdfaf5" stroke-width="1"/>
+                                        <ellipse cx="24" cy="8" rx="6" ry="2" fill="#c9a96e" stroke="#3a2e1e"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">10 Vỏ chai / Lon nhôm</strong>
+                                    <p class="text-sm handwriting text-[#5c4a2e]">(Đã súc sạch)</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full"></div>
+                            <div class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2d5a37] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="#e8d5b0" stroke="#e8d5b0" viewBox="0 0 16 16"><path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z"/></svg>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2"></div>
+                            <div class="w-5/12 pl-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-2 group-hover:rotate-1 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#d5e8d4">
+                                    <!-- SVG: bookmark -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <path d="M14 8 L34 8 L34 42 L24 34 L14 42 Z" fill="#c9a96e" stroke="#3a2e1e"/>
+                                        <path d="M19 18 Q24 14 29 18" stroke="#2d5a37" stroke-width="1.5"/>
+                                        <circle cx="24" cy="22" r="3" fill="#2d5a37"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">01 Bookmark vẽ tay</strong>
+                                    <p class="text-sm handwriting text-[#5c4a2e]">+ 01 túi phân bón nhỏ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 4: Sách → Sen đá đặc biệt -->
+                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
+                            <div class="w-5/12 text-right pr-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-1 group-hover:rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#e8d5b0">
+                                    <!-- SVG: sách -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <rect x="8" y="8" width="22" height="32" rx="2" fill="#a8c5a0" stroke="#2d5a37"/>
+                                        <rect x="14" y="8" width="22" height="32" rx="2" fill="#c9a96e" stroke="#3a2e1e"/>
+                                        <rect x="20" y="8" width="22" height="32" rx="2" fill="#fdfaf5" stroke="#3a2e1e"/>
+                                        <line x1="24" y1="16" x2="38" y2="16" stroke="#3a2e1e" stroke-width="1"/>
+                                        <line x1="24" y1="20" x2="38" y2="20" stroke="#3a2e1e" stroke-width="1"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">03 Cuốn sách / Truyện</strong>
+                                    <p class="text-sm handwriting text-[#5c4a2e]">(Còn nguyên vẹn)</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full"></div>
+                            <div class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c9a96e] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="#2d5a37" stroke="#2d5a37" viewBox="0 0 16 16"><path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z"/></svg>
+                            </div>
+                            <div class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2"></div>
+                            <div class="w-5/12 pl-8">
+                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-1 group-hover:-rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]" style="background:#d5e8d4">
+                                    <!-- SVG: sen đá đặc biệt -->
+                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 48 48">
+                                        <ellipse cx="24" cy="30" rx="14" ry="6" fill="#2d5a37"/>
+                                        <ellipse cx="24" cy="26" rx="10" ry="5" fill="#5c8c5e"/>
+                                        <ellipse cx="24" cy="22" rx="7" ry="4" fill="#a8c5a0"/>
+                                        <ellipse cx="24" cy="18" rx="4" ry="3" fill="#c9a96e"/>
+                                        <ellipse cx="24" cy="15" rx="2" ry="2" fill="#e8d5b0"/>
+                                    </svg>
+                                    <strong class="text-lg text-[#2d5a37]">01 Sen đá đặc biệt</strong>
+                                    <p class="text-sm handwriting text-[#5c4a2e]">(Phật bà / Cánh bướm)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Story -->
+    <section id="story" class="section py-16" style="background:#f5ede1">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-2 text-[#2d5a37]">Hành trình của một cuốn sách</h2>
+            <p class="text-center text-xl handwriting mb-14 text-[#8b7355]">Từ kệ bụi bặm đến đôi tay nhỏ bé</p>
+            
+            <div class="timeline-container">
+                <!-- Bước 1: Điểm xuất phát -->
+                <div class="timeline-item border-2 border-[#2d5a37] shadow-[5px_5px_0_#2d5a37] transform -rotate-1 hover:rotate-0 transition-transform" style="background:#e8d5b0;border-radius:4px 255px 4px 255px/255px 4px 255px 4px">
+                    <div class="text-center p-6">
+                        <svg class="w-28 h-28 mx-auto mb-4" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 96 96">
+                            <!-- Kệ sách vẽ tay -->
+                            <rect x="10" y="70" width="76" height="6" rx="2" fill="#c9a96e"/>
+                            <rect x="10" y="24" width="6" height="52" rx="1" fill="#c9a96e"/>
+                            <rect x="80" y="24" width="6" height="52" rx="1" fill="#c9a96e"/>
+                            <!-- Sách trên kệ -->
+                            <rect x="18" y="36" width="12" height="34" rx="1" fill="#a8c5a0" stroke="#2d5a37"/>
+                            <rect x="32" y="30" width="10" height="40" rx="1" fill="#c9a96e" stroke="#3a2e1e"/>
+                            <rect x="44" y="40" width="14" height="30" rx="1" fill="#fdfaf5" stroke="#3a2e1e"/>
+                            <rect x="60" y="34" width="11" height="36" rx="1" fill="#5c8c5e" stroke="#2d5a37"/>
+                            <!-- Bụi -->
+                            <path d="M18 36 Q22 32 30 36" stroke="#8b7355" stroke-width="1"/>
+                        </svg>
+                        <h3 class="text-2xl handwriting font-bold mb-2 text-[#2d5a37]">1. Điểm xuất phát</h3>
+                        <p class="text-lg text-[#5c4a2e]">Cuốn sách nằm im lìm trên kệ của bạn, chờ đợi một cuộc phiêu lưu mới.</p>
+                    </div>
+                </div>
+                
+                <!-- Bước 2: Trạm dừng chân -->
+                <div class="timeline-item border-2 border-[#2d5a37] shadow-[5px_5px_0_#2d5a37] transform rotate-2 hover:rotate-0 transition-transform" style="background:#d5e8d4;border-radius:255px 4px 255px 4px/4px 255px 4px 255px">
+                    <div class="text-center p-6">
+                        <svg class="w-28 h-28 mx-auto mb-4" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 96 96">
+                            <!-- Quán cafe vẽ tay -->
+                            <path d="M16 50 L16 80 L80 80 L80 50 Z" fill="#e8d5b0" stroke="#3a2e1e"/>
+                            <path d="M10 30 L48 12 L86 30 L86 50 L10 50 Z" fill="#2d5a37" stroke="#3a2e1e"/>
+                            <rect x="38" y="56" width="20" height="24" rx="1" fill="#c9a96e" stroke="#3a2e1e"/>
+                            <path d="M48 50 L48 56" stroke="#3a2e1e"/>
+                            <!-- Cốc cafe -->
+                            <path d="M56 34 L56 28 L66 28 L66 34" stroke="#e8d5b0" stroke-width="1.5"/>
+                            <path d="M54 28 Q60 26 66 28" stroke="#a8c5a0" stroke-width="1"/>
+                            <!-- Cửa số -->
+                            <rect x="22" y="56" width="12" height="14" rx="1" fill="#a8c5a0" stroke="#2d5a37"/>
+                            <rect x="62" y="56" width="12" height="14" rx="1" fill="#a8c5a0" stroke="#2d5a37"/>
+                        </svg>
+                        <h3 class="text-2xl handwriting font-bold mb-2 text-[#2d5a37]">2. Trạm dừng chân</h3>
+                        <p class="text-lg text-[#5c4a2e]">Đến "Trạm Liên Kết" tại quán cafe quen thuộc. Sách được lau chùi, bọc lại thơm tho.</p>
+                    </div>
+                </div>
+                
+                <!-- Bước 3: Điểm đến -->
+                <div class="timeline-item border-2 border-[#2d5a37] shadow-[5px_5px_0_#2d5a37] transform -rotate-1 hover:rotate-0 transition-transform" style="background:#2d5a37;border-radius:4px 255px 4px 255px/255px 4px 255px 4px">
+                    <div class="text-center p-6">
+                        <svg class="w-28 h-28 mx-auto mb-4" fill="none" stroke="#e8d5b0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 96 96">
+                            <!-- Trẻ em vẽ tay -->
+                            <circle cx="48" cy="22" r="14" fill="#c9a96e" stroke="#e8d5b0"/>
+                            <path d="M42 26 Q48 32 54 26" stroke="#e8d5b0" stroke-width="2"/>
+                            <circle cx="43" cy="20" r="2" fill="#3a2e1e"/>
+                            <circle cx="53" cy="20" r="2" fill="#3a2e1e"/>
+                            <!-- Thân -->
+                            <path d="M36 36 Q48 32 60 36 L64 70 L32 70 Z" fill="#a8c5a0" stroke="#e8d5b0"/>
+                            <!-- Tay cầm sách -->
+                            <path d="M36 42 L20 54" stroke="#e8d5b0"/>
+                            <rect x="10" y="52" width="12" height="10" rx="1" fill="#fdfaf5" stroke="#e8d5b0"/>
+                            <path d="M60 42 L76 52" stroke="#e8d5b0"/>
+                        </svg>
+                        <h3 class="text-2xl handwriting font-bold mb-2 text-[#e8d5b0]">3. Điểm đến</h3>
+                        <p class="text-lg text-[#e8d5b0]/90">Trao tận tay các em nhỏ tại bản xa Mường Lát, Quan Sơn, thắp lên ước mơ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wavy-divider"></div>
+
+    <!-- Section 4: Station Board & Search -->
+    <section id="schedule" class="section py-16 bg-[#e9e3d5] relative border-y-4 border-dashed border-[#8b7355]">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-[#8b7355] text-[#f4ebd0] px-8 py-3 rounded-lg shadow-lg transform -rotate-1 relative">
+                    <div class="absolute -top-3 -left-3 w-6 h-6 bg-red-800 rounded-full border-2 border-[#f4ebd0] shadow-md z-10"></div>
+                    <div class="absolute -bottom-3 -right-3 w-6 h-6 bg-red-800 rounded-full border-2 border-[#f4ebd0] shadow-md z-10"></div>
+                    <h2 class="text-4xl typewriter-font font-bold tracking-widest uppercase">Bảng Tin Trạm Xanh</h2>
+                </div>
+                <p class="text-xl mt-6 handwriting text-[#5c4a3d] font-bold">Cập nhật thông tin và tìm trạm trao đổi gần bạn nhất!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                <!-- Left Column: Nearest Station Search -->
+                <div class="lg:col-span-5 flex flex-col">
+                    <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-[#8b7355] shadow-[8px_8px_0_#8b7355] relative h-full flex flex-col">
+                        <!-- Washi tape corner -->
+                        <div class="absolute -top-4 -left-4 w-20 h-6 bg-[#d9ba8f]/80 transform -rotate-45 shadow-sm"></div>
+                        
+                        <h3 class="font-bold text-2xl mb-4 text-[#5c4a3d] border-b-2 border-dashed border-[#8b7355] pb-2 flex items-center gap-2">
+                            <span>
+                                <svg class="w-8 h-8 text-[#8b7355] inline-block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M4 10l8-4 8 4-8 10-8-10z"></path>
+                                    <path d="M12 14v4"></path>
+                                    <path transform="rotate(-10 12 12)" d="M11 6a1 1 0 102 0 1 1 0 00-2 0z" fill="currentColor"></path>
+                                </svg>
+                            </span> 
+                            Tìm Trạm Gần Bạn
+                        </h3>
+                        
+                        <p class="mb-4 text-[#5c4a3d]/80 text-sm">
+                            Nhập địa chỉ của bạn tại Thanh Hóa (VD: Đông Thọ, Lê Hoàn...) để hệ thống đo và tìm đường nhé!
+                        </p>
+                        
+                        <div class="relative mb-6">
+                            <input type="text" id="addressInput" placeholder="Nhập địa chỉ của bạn..." 
+                                   class="w-full pl-12 pr-4 py-3 bg-[#fdfbf7] border-2 border-[#8b7355] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8b7355] font-medium text-[#5c4a3d] placeholder-[#8b7355]/50 transition-all shadow-inner handwriting text-xl">
+                            <span class="absolute left-3 top-3.5 text-[#8b7355]">
+                                <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="#FFF8E7"></path>
+                                    <circle cx="12" cy="10" r="3" fill="#8b7355"></circle>
+                                </svg>
+                            </span>
+                        </div>
+                        
+                        <button onclick="findNearestStation()" class="w-full bg-transparent border-2 border-[#8b7355] hover:bg-[#8b7355] text-[#8b7355] hover:text-[#f4ebd0] font-bold py-3 rounded-xl transition-colors shadow-[4px_4px_0_#8b7355] hover:shadow-[2px_2px_0_#8b7355] hover:translate-y-1 flex items-center justify-center gap-2 group">
+                            <span>
+                                <svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M11 19A8 8 0 1 0 11 3a8 8 0 0 0 0 16z"></path>
+                                    <path d="M21 21l-4.35-4.35"></path>
+                                </svg>
+                            </span>
+                            <span class="handwriting text-2xl">Bắt đầu tìm kiếm</span>
+                            <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                        </button>
+                        
+                        <!-- Results Container -->
+                        <div id="searchResult" class="mt-8 flex-1 bg-[#f4ebd0] border-2 border-[#8b7355] rounded-xl p-6 hidden flex-col items-center justify-center text-center relative overflow-hidden shadow-inner">
+                            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/recycled-paper.png')] opacity-60"></div>
+                            <div class="relative z-10 w-full">
+                                <div id="loadingState" class="hidden flex-col items-center gap-3">
+                                    <svg class="animate-spin w-10 h-10 text-[#8b7355]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                                    </svg>
+                                    <p class="text-[#5c4a3d] font-bold animate-pulse handwriting text-xl">Đang lần theo dấu vết...</p>
+                                </div>
+                                
+                                <div id="resultState" class="hidden flex-col items-center">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-green-800 bg-[#A8E6CF] px-3 py-1 rounded border border-green-500 mb-3 shadow-[2px_2px_0_rgba(0,0,0,0.1)] block transform -rotate-2">Gợi ý tốt nhất</span>
+                                    <h4 id="resultStationName" class="font-bold text-3xl text-[#5c4a3d] mb-2 handwriting">Trạm...</h4>
+                                    <p id="resultAddress" class="text-sm text-[#5c4a3d] mb-4 flex items-center gap-1 justify-center">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="#FFF8E7"></path><circle cx="12" cy="10" r="3" fill="#8b7355"></circle></svg> 
+                                        <span id="resultAddressText">...</span>
+                                    </p>
+                                    
+                                    <div class="w-full bg-[#fdfbf7] rounded p-3 border-2 border-dashed border-[#8b7355]/50 mb-4 flex justify-between items-center transform rotate-1">
+                                        <span class="text-[#5c4a3d] font-medium handwriting text-lg">Độ dài chặng đường:</span>
+                                        <span id="resultDistance" class="font-bold text-[#8b7355] text-xl">... km</span>
+                                    </div>
+                                    
+                                    <a id="resultMapLink" href="#" target="_blank" class="flex justify-center items-center gap-2 w-full text-center bg-[#89CFF0] text-[#2c3e50] border-2 border-[#2c3e50] py-2 rounded-lg font-bold hover:bg-[#6cbce2] transition-colors shadow-[2px_2px_0_#2c3e50] transform hover:-translate-y-1">
+                                        Mở bản đồ cầm tay
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Right Column: Notice Board -->
+                <div class="lg:col-span-7 relative">
+                    <!-- Carton Board background -->
+                    <div class="absolute inset-0 bg-[#d9caad] rounded-md shadow-[inset_0_0_20px_rgba(0,0,0,0.3)] border-8 border-[#705a45] bg-[url('https://www.transparenttextures.com/patterns/cardboard-flat.png')]">
+                    </div>
+                    
+                    <div class="relative z-10 p-6 md:p-8 h-[600px] overflow-y-auto custom-scrollbar">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-4 relative">
+
+                            <!-- Trạm 1: Tiệm Trà Mầm — Kraft hang-tag -->
+                            <div class="bg-[#d9c5a0] p-6 pt-10 rounded-b-xl rounded-t-3xl shadow-[4px_6px_14px_rgba(0,0,0,0.22)] relative border border-[#b8975c] transform rotate-2 hover:-rotate-1 transition-transform group" style="background-image:url('https://www.transparenttextures.com/patterns/recycled-paper.png')">
+                                <!-- Hole & string -->
+                                <div class="absolute top-3 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#705a45] rounded-full shadow-inner border border-[#4a3b2d]"></div>
+                                <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-0.5 h-14 border-l-2 border-dashed border-[#c9b47a]"></div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-[#5c4a3d]/60 font-mono">Trạm #01 · Thanh Hóa</span>
+                                        <h4 class="font-bold text-2xl text-[#2d5a37] handwriting mt-0.5">Tiệm Trà Mầm</h4>
+                                    </div>
+                                    <svg class="w-12 h-12 flex-shrink-0 drop-shadow transform group-hover:rotate-12 transition-transform" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 40 40">
+                                        <path d="M6 14h22v12a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6V14z" fill="#e8d5b0"/>
+                                        <path d="M28 18h3a3 3 0 0 1 0 6h-3" stroke="#8b6914"/>
+                                        <path d="M11 8 Q13 5 11 2 M17 8 Q19 5 17 2 M23 8 Q25 5 23 2" stroke="#5c8c5e" stroke-width="1.5"/>
+                                        <line x1="6" y1="14" x2="28" y2="14"/>
+                                    </svg>
+                                </div>
+                                <div class="border-t border-dashed border-[#8b7355]/50 pt-3 space-y-2">
+                                    <p class="flex items-start gap-1.5 text-xs font-mono text-[#3a2e1e]">
+                                        <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-[#2d5a37]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                        KĐT Đông Bắc Ga, P. Đông Thọ, TP. Thanh Hóa
+                                    </p>
+                                    <p class="flex items-start gap-1.5 text-xs font-mono text-[#3a2e1e]">
+                                        <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-[#2d5a37]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        Thứ 2 – Thứ 7 &nbsp;|&nbsp; 8:00 – 21:00
+                                    </p>
+                                    <p class="handwriting text-base text-[#3a2e1e] italic">"Mang rác tới, nhận trà và cây cưng về!"</p>
+                                </div>
+                            </div>
+
+                            <!-- Trạm 2: Cà Phê Sân Vườn — torn receipt -->
+                            <div class="bg-[#fdfbf7] p-6 pb-10 shadow-[4px_4px_10px_rgba(0,0,0,0.12)] relative transform -rotate-1 hover:rotate-2 transition-transform group border-t-2 border-dashed border-[#b8975c]" style="background-image:radial-gradient(circle at 10px 105%,transparent 10px,#fdfbf7 11px);background-size:20px 10px;background-position:bottom;background-repeat:repeat-x;">
+                                <!-- Pin -->
+                                <div class="absolute -top-3 left-5 w-5 h-5 bg-[#C0C0C0] rounded-full shadow-md border border-gray-400 flex items-center justify-center">
+                                    <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                                </div>
+                                <div class="text-center border-b border-gray-300 pb-2 mb-3">
+                                    <p class="text-[10px] text-gray-400 uppercase tracking-widest font-mono">Station #02 · Thanh Hóa City</p>
+                                </div>
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <h4 class="font-bold text-2xl text-[#2d5a37] handwriting">Cà Phê Sân Vườn</h4>
+                                        <p class="text-xs font-mono text-gray-500 mt-1">28 Trần Phú, P. Lam Sơn, TP. Thanh Hóa</p>
+                                    </div>
+                                    <svg class="w-11 h-11 flex-shrink-0 drop-shadow transform group-hover:-rotate-12 transition-transform" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 40 40">
+                                        <path d="M6 14h22v12a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6V14z" fill="#c9a96e"/>
+                                        <path d="M28 18h3a3 3 0 0 1 0 6h-3" stroke="#8b6914"/>
+                                        <path d="M11 8 Q13 5 11 2 M17 8 Q19 5 17 2" stroke="#2d5a37" stroke-width="1.5"/>
+                                        <line x1="6" y1="14" x2="28" y2="14"/>
+                                    </svg>
+                                </div>
+                                <ul class="text-xs font-mono text-gray-600 space-y-2 border-t border-dashed border-gray-300 pt-3">
+                                    <li class="flex justify-between"><span>Giờ mở cửa</span><span class="text-[#2d5a37] font-bold">07:00 – 22:00 hàng ngày</span></li>
+                                    <li class="flex justify-between"><span>Nhận đồ tái chế</span><span class="text-[#2d5a37] font-bold">T3, T5, T7</span></li>
+                                </ul>
+                                <p class="handwriting text-base text-[#3a2e1e] italic pt-3">"Uống cà phê, ủng hộ xanh — một công đôi việc!"</p>
+                            </div>
+
+                            <!-- Lịch vận chuyển — Vintage Train Ticket -->
+                            <div class="bg-[#f5ede1] rounded-sm p-1 shadow-[4px_4px_10px_rgba(0,0,0,0.15)] relative transform -rotate-1 hover:rotate-1 transition-transform group md:col-span-2 border border-[#c9b47a]">
+                                <div class="border-2 border-dashed border-[#2d5a37] rounded h-full flex flex-col md:flex-row">
+                                    <!-- Stub -->
+                                    <div class="w-full md:w-[28%] flex-shrink-0 text-center border-b-2 md:border-b-0 md:border-r-2 border-dashed border-[#2d5a37] p-5 flex flex-col items-center justify-center relative bg-[#2d5a37]/8">
+                                        <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#e8d5b0] rounded-full border border-[#2d5a37]"></div>
+                                        <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#e8d5b0] rounded-full border border-[#2d5a37]"></div>
+                                        <p class="text-[10px] font-bold uppercase tracking-widest text-[#2d5a37]/80 mb-2">Lịch chuyến tuần này</p>
+                                        <!-- Truck doodle -->
+                                        <svg class="w-18 h-14 mb-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="#3a2e1e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 58 40">
+                                            <rect x="2" y="12" width="32" height="18" rx="2" fill="#e8d5b0"/>
+                                            <path d="M34 18h8l6 8v4H34V18z" fill="#a8c5a0"/>
+                                            <circle cx="10" cy="32" r="4" fill="#c9a96e" stroke="#3a2e1e"/>
+                                            <circle cx="44" cy="32" r="4" fill="#c9a96e" stroke="#3a2e1e"/>
+                                            <line x1="2" y1="24" x2="34" y2="24"/>
+                                            <rect x="7" y="15" width="8" height="8" rx="1" fill="#2d5a37" opacity="0.35"/>
+                                            <rect x="18" y="15" width="8" height="8" rx="1" fill="#2d5a37" opacity="0.35"/>
+                                        </svg>
+                                        <h4 class="font-bold text-xl text-[#2d5a37] handwriting">Chuyến Xe Xanh</h4>
+                                    </div>
+                                    <!-- Body -->
+                                    <div class="w-full md:w-[72%] p-5">
+                                        <p class="text-[10px] uppercase font-bold text-[#8b7355] tracking-widest mb-3 font-mono">Lịch thu gom &amp; vận chuyển hàng tuần</p>
+                                        <div class="space-y-2.5 text-xs font-mono text-[#5c4a3d]">
+                                            <div class="flex gap-2 items-start border-b border-dashed border-[#d9caad] pb-2">
+                                                <span class="bg-[#2d5a37] text-[#f5ede1] text-[10px] px-2 py-0.5 rounded font-bold flex-shrink-0 whitespace-nowrap">T3 &amp; T6</span>
+                                                <span>Thu gom <strong>sách cũ, giấy báo</strong> tại Tiệm Trà Mầm &amp; Cà Phê Sân Vườn — 8:00 đến 10:00</span>
+                                            </div>
+                                            <div class="flex gap-2 items-start border-b border-dashed border-[#d9caad] pb-2">
+                                                <span class="bg-[#5c8c5e] text-[#f5ede1] text-[10px] px-2 py-0.5 rounded font-bold flex-shrink-0">T5</span>
+                                                <span>Chuyển <strong>chai nhựa, lon nhôm</strong> tới cơ sở tái chế Hồng Đức — 14:00 đến 16:00</span>
+                                            </div>
+                                            <div class="flex gap-2 items-start">
+                                                <span class="bg-[#c9a96e] text-[#3a2e1e] text-[10px] px-2 py-0.5 rounded font-bold flex-shrink-0">CN</span>
+                                                <span>Giao <strong>sách lên vùng cao</strong> — Mường Lát, Quan Sơn. Khởi hành 7:00 từ Quảng Trường Lam Sơn</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Điểm tập kết chính: Quảng Trường Lam Sơn -->
+                            <div class="bg-[#2d5a37] p-6 shadow-[5px_5px_0_#3a2e1e] relative border-2 border-[#3a2e1e] transform rotate-1 group md:col-span-2" style="border-radius:6px 255px 6px 255px/255px 6px 255px 6px">
+                                <!-- Washi tape -->
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#a8c5a0]/70 transform -rotate-1 border border-[#2d5a37]/30 shadow-sm"></div>
+                                <div class="flex items-center gap-4 mb-4">
+                                    <svg class="w-12 h-12 flex-shrink-0" fill="none" stroke="#e8d5b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 40 40">
+                                        <circle cx="20" cy="20" r="17" fill="#3d7048" stroke="#e8d5b0"/>
+                                        <path d="M20 10 l2.5 7.5H29l-6 4.5 2.5 7.5L20 25l-5.5 4.5 2.5-7.5-6-4.5h6.5z" fill="#f5ede1" stroke="#2d5a37"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-[#a8c5a0] text-[10px] font-mono uppercase tracking-widest">Điểm tập kết chính</p>
+                                        <h4 class="font-bold text-3xl text-[#f5ede1] handwriting leading-tight">Quảng Trường Lam Sơn</h4>
+                                    </div>
+                                </div>
+                                <p class="text-[#e8d5b0] handwriting text-xl leading-relaxed">
+                                    Mỗi <span class="bg-[#a8c5a0]/25 px-1 rounded">Chủ Nhật</span>, từ <strong class="text-[#f5ede1]">8:00 – 11:00 sáng</strong>, đội Green Exchange tập kết tại Quảng Trường Lam Sơn để phân loại, đóng gói và chuyển rác tái chế đến tay đúng người. Mang đồ đến đây — chúng mình lo phần còn lại!
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wavy-divider" style="transform: scaleY(-1);"></div>
+
+    <!-- MỚI: Nhật Ký Mầm Xanh (The Spot) -->
+    <section id="the-spot" class="section py-16 relative" style="background-color:#f5ede1">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cork-board.png')] opacity-25"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-[#2d5a37]">Nhật Ký Mầm Xanh</h2>
+                    <p class="text-xl handwriting text-[#5c4a2e]/80 max-w-xl">
+                        Góc lưu giữ nụ cười và khoảnh khắc "sống xanh" tuyệt vời tại các Trạm. Mỗi bức ảnh là một mầm xanh hy vọng!
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-0 text-center md:text-right">
+                    <a href="https://www.facebook.com/phuong.ha.271170?locale=vi_VN"><button class="btn shadow-[4px_4px_0px_#2d5a37] transform hover:-translate-y-1">
+                        Gửi khoảnh khắc
+                    </button></a>
+                    <p class="text-sm handwriting mt-2 text-[#5c4a2e]/70">Cùng chia sẻ với Admin nhé</p>
+                </div>
+            </div>
+
+            <!-- Bảng Bần Đa Hình (Grid) -->
+            <div class="relative py-8">
+                <!-- Khu vực chứa tối đa 100 ảnh của tuần -->
+                <div id="moments-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 pb-10 z-10 relative place-items-center">
+                    <!-- Ảnh 1 -->
+                    <div class="relative group mt-4 hover:z-50 transition-all w-full max-w-[200px]">
+                        <!-- Khung Polaroid -->
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Push Pin -->
+                            <div class="absolute -top-3 left-1/2 w-5 h-5 bg-red-400 rounded-full shadow-md z-30 border-[1.5px] border-red-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1606185250499-1bd12f3bc194?auto=format&fit=crop&w=400&h=400&q=80" alt="Check-in Cafe" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Bạn Lan - Check-in tại Cafe Đông Thọ">"Bạn Lan - Check-in Cafe..."</p>
+                        </div>
+                    </div>
+                    <div class="relative group mt-4 hover:z-50 transition-all w-full max-w-[200px]">
+                        <!-- Khung Polaroid -->
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Push Pin -->
+                            <div class="absolute -top-3 left-1/2 w-5 h-5 bg-red-400 rounded-full shadow-md z-30 border-[1.5px] border-red-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1606185250499-1bd12f3bc194?auto=format&fit=crop&w=400&h=400&q=80" alt="Check-in Cafe" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Bạn Lan - Check-in tại Cafe Đông Thọ">"Bạn Lan - Check-in Cafe..."</p>
+                        </div>
+                    </div>
+                    <div class="relative group mt-4 hover:z-50 transition-all w-full max-w-[200px]">
+                        <!-- Khung Polaroid -->
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Push Pin -->
+                            <div class="absolute -top-3 left-1/2 w-5 h-5 bg-red-400 rounded-full shadow-md z-30 border-[1.5px] border-red-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1606185250499-1bd12f3bc194?auto=format&fit=crop&w=400&h=400&q=80" alt="Check-in Cafe" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Bạn Lan - Check-in tại Cafe Đông Thọ">"Bạn Lan - Check-in Cafe..."</p>
+                        </div>
+                    </div>
+                    <div class="relative group mt-4 hover:z-50 transition-all w-full max-w-[200px]">
+                        <!-- Khung Polaroid -->
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Push Pin -->
+                            <div class="absolute -top-3 left-1/2 w-5 h-5 bg-red-400 rounded-full shadow-md z-30 border-[1.5px] border-red-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1606185250499-1bd12f3bc194?auto=format&fit=crop&w=400&h=400&q=80" alt="Check-in Cafe" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Bạn Lan - Check-in tại Cafe Đông Thọ">"Bạn Lan - Check-in Cafe..."</p>
+                        </div>
+                    </div>
+                    <div class="relative group mt-4 hover:z-50 transition-all w-full max-w-[200px]">
+                        <!-- Khung Polaroid -->
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-3 group-hover:rotate-0 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Push Pin -->
+                            <div class="absolute -top-3 left-1/2 w-5 h-5 bg-red-400 rounded-full shadow-md z-30 border-[1.5px] border-red-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1606185250499-1bd12f3bc194?auto=format&fit=crop&w=400&h=400&q=80" alt="Check-in Cafe" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Bạn Lan - Check-in tại Cafe Đông Thọ">"Bạn Lan - Check-in Cafe..."</p>
+                        </div>
+                    </div>
+                    <!-- Ảnh 2 -->
+                    <div class="relative group mt-2 hover:z-50 transition-all w-full max-w-[200px]">
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform rotate-3 group-hover:-rotate-1 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Washi Tape -->
+                            <div class="absolute -top-3 -right-2 w-10 h-4 bg-yellow-200/80 transform rotate-[-15deg] shadow-sm z-30"></div>
+                            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=400&h=400&q=80" alt="Gom báo cũ" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Gom báo cũ để đổi hoa">"Gom báo cũ đổi hoa"</p>
+                        </div>
+                    </div>
+                    <div class="relative group mt-2 hover:z-50 transition-all w-full max-w-[200px]">
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform rotate-3 group-hover:-rotate-1 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <!-- Washi Tape -->
+                            <div class="absolute -top-3 -right-2 w-10 h-4 bg-yellow-200/80 transform rotate-[-15deg] shadow-sm z-30"></div>
+                            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=400&h=400&q=80" alt="Gom báo cũ" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Gom báo cũ để đổi hoa">"Gom báo cũ đổi hoa"</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Ảnh 3 -->
+                    <div class="relative group mt-6 hover:z-50 transition-all w-full max-w-[200px]">
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-5 group-hover:rotate-1 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <div class="absolute -top-3 left-1/3 w-5 h-5 bg-blue-400 rounded-full shadow-md z-30 border-[1.5px] border-blue-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?auto=format&fit=crop&w=400&h=400&q=80" alt="Hiệp sĩ nhí" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Hiệp sĩ nhí tại Trạm Vincom">"Hiệp sĩ nhí Vincom"</p>
+                        </div>
+                    </div>
+
+                    <!-- Ảnh 4 -->
+                    <div class="relative group mt-1 hover:z-50 transition-all w-full max-w-[200px]">
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform rotate-4 group-hover:-rotate-2 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <div class="absolute -top-2 left-4 w-10 h-4 bg-green-200/80 transform rotate-12 shadow-sm z-30 border border-green-300/30"></div>
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&h=400&q=80" alt="Sách tới bản" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Sách sắp lên đường tới Mường Lát">"Sách tới Mường Lát"</p>
+                        </div>
+                    </div>
+
+                    <!-- Ảnh 5 -->
+                    <div class="relative group mt-5 hover:z-50 transition-all w-full max-w-[200px]">
+                        <div class="bg-white p-2 pb-8 border border-gray-200 shadow-md transform -rotate-2 group-hover:rotate-2 group-hover:scale-110 transition-all duration-300 relative w-full">
+                            <div class="absolute -top-3 left-[70%] w-5 h-5 bg-purple-400 rounded-full shadow-md z-30 border-[1.5px] border-purple-600 flex items-center justify-center transform -translate-x-1/2">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full opacity-60"></div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1610419356616-896dfa428c0b?auto=format&fit=crop&w=400&h=400&q=80" alt="Team TNV" class="w-full aspect-square object-cover border border-gray-100">
+                            <p class="handwriting text-center mt-2 text-xs md:text-sm text-ink-black px-1 truncate" title="Team Green Thanh Hóa">"Team Thanh Hóa"</p>
+                        </div>
+                    </div>
+                </div>
+                
+             
+
+            <!-- Quy Trình Vận Hành -->
+            <div class="mt-20 bg-[#fdfaf5] px-8 py-10 md:px-12 md:py-12 rounded-2xl border-2 border-[#2d5a37] shadow-[8px_8px_0px_#2d5a37] max-w-4xl mx-auto transform rotate-1 relative">
+                <!-- Washi Tape -->
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-[#a8c5a0]/70 transform -rotate-2 border border-[#2d5a37]/30"></div>
+                <h3 class="font-bold text-3xl md:text-4xl handwriting mb-8 text-center text-[#2d5a37]">Cách thức "Check-in &amp; Lên Sóng"</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                    <div class="flex items-start gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-mint-green flex items-center justify-center font-bold text-2xl border-2 border-ink-black flex-shrink-0 handwriting">4</div>
+                        <div>
+                            <span class="font-bold text-xl block mb-1">Lan tỏa mạng xã hội</span>
+                            <p class="text-ink-black/80">Đừng quên chia sẻ lại lên Facebook/Instagram để tự hào về thành quả "sống xanh" nhé!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wavy-divider"></div>
+
+    <!-- Section 6: How-to & Campaigns -->
+    <section id="guide" class="section py-16 bg-[#f5ede1]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-[#2d5a37]">Hướng dẫn chuẩn bị</h2>
+            <p class="handwriting text-2xl text-center text-[#8b7355] mb-14">Đơn giản thôi — 3 bước là sẵn sàng!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="card-doodle text-center transform -rotate-1" style="background:#e8d5b0">
+                    <div class="w-20 h-20 mx-auto border-2 border-[#2d5a37] rounded-full flex items-center justify-center mb-4 bg-[#a8c5a0]">
+                        <span class="text-3xl font-bold font-serif text-[#2d5a37]">1</span>
+                    </div>
+                    <h3 class="font-bold text-2xl handwriting mb-2 text-[#2d5a37]">Làm sạch</h3>
+                    <p class="text-lg text-[#5c4a2e]">Xả sạch vỏ chai, để khô ráo. Không cần bóc nhãn.</p>
+                </div>
+                <div class="card-doodle text-center transform rotate-2" style="background:#f5ede1">
+                    <div class="w-20 h-20 mx-auto border-2 border-[#2d5a37] rounded-full flex items-center justify-center mb-4 bg-[#c9a96e]">
+                        <span class="text-3xl font-bold font-serif text-[#3a2e1e]">2</span>
+                    </div>
+                    <h3 class="font-bold text-2xl handwriting mb-2 text-[#2d5a37]">Buộc gọn</h3>
+                    <p class="text-lg text-[#5c4a2e]">Gấp phẳng bìa carton, buộc bằng dây thừng hoặc nilon tái chế.</p>
+                </div>
+                <div class="card-doodle text-center transform -rotate-2" style="background:#d5e8d4">
+                    <div class="w-20 h-20 mx-auto border-2 border-[#2d5a37] rounded-full flex items-center justify-center mb-4 bg-[#2d5a37]">
+                        <span class="text-3xl font-bold font-serif text-[#e8d5b0]">3</span>
+                    </div>
+                    <h3 class="font-bold text-2xl handwriting mb-2 text-[#2d5a37]">Chọn lọc</h3>
+                    <p class="text-lg text-[#5c4a2e]">Chọn những cuốn sách bạn yêu nhất để gửi gắm niềm vui.</p>
+                </div>
+            </div>
+
+            <!-- Chiến dịch mùa -->
+            <div class="card-doodle max-w-4xl mx-auto" style="background:#2d5a37">
+                <h3 class="text-3xl handwriting font-bold text-center mb-6 border-b-2 border-[#a8c5a0] pb-2 text-[#e8d5b0]">Chiến dịch "Mùa nào hoa nấy"</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <h4 class="font-bold text-xl mb-2 text-[#a8c5a0]">Tháng 1-3 (Xuân)</h4>
+                        <p class="text-[#e8d5b0]/90">Đổi giấy lấy hạt Cánh bướm, hoa Cúc</p>
+                    </div>
+                    <div class="border-y md:border-y-0 md:border-x-2 border-dashed border-[#a8c5a0] py-4 md:py-0">
+                        <h4 class="font-bold text-xl mb-2 text-[#c9a96e]">Tháng 4-6 (Hè)</h4>
+                        <p class="text-[#e8d5b0]/90">Đổi vỏ chai lấy Sen đá chịu nhiệt</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-2 text-[#a8c5a0]">Tháng 9-11 (Thu)</h4>
+                        <p class="text-[#e8d5b0]/90">Gom sách giáo khoa trước thềm năm học</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wavy-divider"></div>
+
+    <section id="volunteer" class="section py-16 relative" style="background-color:#2d5a37">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/paper.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 relative z-10">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-[#e8d5b0]">Tham gia cùng chúng mình</h2>
+                <p class="text-xl handwriting mb-6 text-[#a8c5a0]">Trở thành Tình nguyện viên hoặc Trạm Liên Kết</p>
+                <div class="card-doodle transform -rotate-1" style="background:#f5ede1">
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-7 h-7 flex-shrink-0 mt-0.5" fill="none" stroke="#2d5a37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 11c-2-3-6-3-6 1 0 4 6 6 6 6s6-2 6-6c0-4-4-4-6-1z" fill="#a8c5a0"/><path d="M12 11V7"/><path d="M7 11h10l-1 9H8l-1-9z" fill="#c9a96e"/></svg>
+                            <span class="text-[#3a2e1e]"><strong>Tình nguyện viên:</strong> Hỗ trợ truyền thông, điều phối xe gom rác, tham gia "Spa Sách" cuối tuần.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-7 h-7 flex-shrink-0 mt-0.5" fill="none" stroke="#2d5a37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="#e8d5b0"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            <span class="text-[#3a2e1e]"><strong>Đối tác (Quán Cafe/Tiệm):</strong> Đặt "Kệ Xanh" tại quán, tạo điểm thu gom tiện lợi cho cộng đồng.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form action="https://formsubmit.co/phuongha9112006@gmail.com" method="POST" id="volunteer-form" class="card-doodle transform rotate-1" style="background:#e8d5b0">
+                <div class="grid grid-cols-1 gap-6">
+                    <div>
+                        <label class="block text-lg font-bold handwriting mb-2 text-[#2d5a37]">Tên của bạn là gì?</label>
+                        <input type="text" name="name" required placeholder="Vd: Nguyễn Văn A" class="w-full" style="border-bottom-color:#2d5a37">
+                    </div>
+                    <div>
+                        <label class="block text-lg font-bold handwriting mb-2 text-[#2d5a37]">Cách liên lạc với bạn?</label>
+                        <input type="tel" name="phone" required placeholder="Số điện thoại / Zalo" class="w-full" style="border-bottom-color:#2d5a37">
+                    </div>
+                    <div>
+                        <label class="block text-lg font-bold handwriting mb-2 text-[#2d5a37]">Bạn muốn tham gia vai trò nào?</label>
+                        <select name="role" class="w-full" style="border-bottom-color:#2d5a37">
+                            <option value="volunteer">Tình nguyện viên năng nổ</option>
+                            <option value="partner">Đối tác đặt Trạm Xanh</option>
+                            <option value="donate">Gom rác số lượng lớn tại nhà (&gt;10kg)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-lg font-bold handwriting mb-2 text-[#2d5a37]">Lời nhắn gửi Trạm Xanh</label>
+                        <textarea name="message" rows="3" placeholder="Mong muốn đồng hành cùng dự án..." class="w-full" style="border-bottom-color:#2d5a37"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn mt-8 w-full text-center bg-[#2d5a37] text-[#e8d5b0] border-[#3a2e1e] hover:bg-[#5c8c5e]">Gửi đi yêu thương</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-[#2d5a37] pt-16 pb-8 text-[#f5ede1] relative overflow-hidden border-t-4 border-dashed border-[#a8c5a0]">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-15"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Cột 1 -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <circle cx="22" cy="22" r="21" fill="#a8c5a0" stroke="#e8d5b0" stroke-width="2"/>
+                            <path d="M22 34 C16 28 11 21 16 14 C20 9 27 12 29 17 C31 22 27 32 22 34Z" fill="#2d5a37" stroke="#e8d5b0" stroke-width="1.5"/>
+                            <path d="M22 34 Q19 24 21 14" stroke="#e8d5b0" stroke-width="1.2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="font-extrabold text-3xl text-[#e8d5b0] typewriter-font tracking-wider">Green Exchange</span>
+                    </div>
+                    <p class="text-lg mb-6 text-[#e8d5b0]/80 handwriting text-2xl">"Gom chút cũ kỹ, nảy mầm tin yêu. Cùng lan tỏa lối sống xanh giữa lòng Thanh Hóa."</p>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="group flex items-center gap-2 bg-[#e8d5b0] text-[#2d5a37] px-6 py-3 font-bold handwriting text-2xl border-2 border-[#e8d5b0]/40 hover:bg-transparent hover:text-[#e8d5b0] transition-all duration-300 transform hover:-translate-y-2" style="border-radius:255px 15px 225px 15px/15px 225px 15px 255px">
+                        <span>Trở lên cành cao</span>
+                        <svg class="w-6 h-6 group-hover:animate-bounce" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+                    </button>
+                </div>
+                <!-- Cột 2: Quick Links -->
+                <div class="flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold mb-6 text-[#a8c5a0] border-b-2 border-dashed border-[#a8c5a0] pb-2 inline-block handwriting tracking-wider">Khám Phá Trạm</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li><a href="#values" class="hover:text-[#c9a96e] transition-colors flex items-center gap-2 text-[#e8d5b0]/90">
+                            <svg class="w-4 h-4 text-[#a8c5a0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 11c-2-3-6-3-6 1 0 4 6 6 6 6s6-2 6-6c0-4-4-4-6-1z" fill="#a8c5a0"/></svg> Trạm có gì?</a></li>
+                        <li><a href="#exchange-rules" class="hover:text-[#c9a96e] transition-colors flex items-center gap-2 text-[#e8d5b0]/90">
+                            <svg class="w-4 h-4 text-[#a8c5a0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 11c-2-3-6-3-6 1 0 4 6 6 6 6s6-2 6-6c0-4-4-4-6-1z" fill="#a8c5a0"/></svg> Nhật ký gieo mầm</a></li>
+                        <li><a href="#schedule" class="hover:text-[#c9a96e] transition-colors flex items-center gap-2 text-[#e8d5b0]/90">
+                            <svg class="w-4 h-4 text-[#a8c5a0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 11c-2-3-6-3-6 1 0 4 6 6 6 6s6-2 6-6c0-4-4-4-6-1z" fill="#a8c5a0"/></svg> Bản đồ tìm Trạm</a></li>
+                        <li><a href="#volunteer" class="hover:text-[#c9a96e] transition-colors flex items-center gap-2 text-[#e8d5b0]/90">
+                            <svg class="w-4 h-4 text-[#a8c5a0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 11c-2-3-6-3-6 1 0 4 6 6 6 6s6-2 6-6c0-4-4-4-6-1z" fill="#a8c5a0"/></svg> Trở thành mảnh ghép</a></li>
+                    </ul>
+                </div>
+                <!-- Cột 3: Connect -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-6 text-[#a8c5a0] border-b-2 border-dashed border-[#a8c5a0] pb-2 inline-block handwriting tracking-wider">Gửi Lời Chào</h3>
+                    <p class="text-lg mb-4 flex items-center justify-center md:justify-start gap-3 text-[#e8d5b0]/90">
+                        <svg class="w-6 h-6 text-[#a8c5a0]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        TP. Thanh Hóa, Việt Nam
+                    </p>
+                    <p class="text-lg mb-6 flex items-center justify-center md:justify-start gap-3">
+                        <svg class="w-6 h-6 text-[#a8c5a0]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:phuongha9112006@gmail.com" class="text-[#e8d5b0]/90 hover:text-[#c9a96e] transition-colors">Green Exchange@gmail.com</a>
+                    </p>
+                    <div class="flex gap-4 items-center justify-center md:justify-start">
+                        <a href="https://www.facebook.com/phuong.ha.271170?locale=vi_VN" target="_blank" class="w-12 h-12 bg-[#e8d5b0] text-[#2d5a37] rounded-full flex items-center justify-center hover:bg-[#a8c5a0] hover:text-[#2d5a37] transition-all transform hover:scale-110 hover:rotate-12 border-2 border-transparent" title="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <div class="relative w-12 h-12 flex items-center justify-center text-[#a8c5a0]">
+                            <svg class="w-8 h-8 absolute animate-bounce" style="animation-duration:2s" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5 5 9.2 5 9.2s1.5.8 2.4.5C4 7 6 5 6 5s1.5 1 2 1c-1.3-4 5-3 5-3 .8 2.2 2 4 4 4z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-[#e8d5b0]/20 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+                <p class="text-sm md:text-base text-[#e8d5b0]/60">© 2026 Green Exchange - Trạm Đổi Xanh Thanh Hóa.</p>
+                
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Hiệu ứng cây lớn theo cuộn -->
+    <div id="growing-tree" class="fixed right-6 bottom-6 w-12 h-12 z-40 transition-all duration-1000">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+            <path d="M50 90 L50 60 L45 65 L50 60 L55 65 L50 60 L50 30 L48 35 L50 30 L52 35 L50 30 L50 10" 
+                  stroke="#2e7d32" stroke-width="2" fill="none" class="tree-path" />
+        </svg>
+    </div>
+
+    <!-- Modal Gửi Khoảnh Khắc -->
+    <!-- <div id="momentModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
+        <div class="relative bg-white max-w-lg w-full rounded-2xl border-4 border-ink-black shadow-[8px_8px_0px_#2c3e50] p-6 md:p-8 transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+           
+            
+            <h3 class="text-3xl handwriting font-bold text-center mb-2 border-b-2 border-dashed border-ink-black pb-2 mt-4">Gửi Khoảnh Khắc 🌱</h3>
+            <p class="text-center mb-6 text-ink-black/70 handwriting text-xl">Chia sẻ nụ cười của bạn với Trạm Xanh nhé!</p> -->
+<!--             
+            <form ></action=> id="moment-form" class="space-y-4">
+                <div>
+                    <label class="block font-bold mb-1">Tên của bạn *</label>
+                    <input type="text" id="momentName" required class="w-full border-2 border-ink-black rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-mint-green bg-gray-50" placeholder="Nguyễn Văn A">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1">Trạm bạn đã đến *</label>
+                    <select id="momentStation" required class="w-full border-2 border-ink-black rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-mint-green bg-gray-50">
+                        <option value="">-- Chọn Trạm --</option>
+                        <option value="DongTho">Tiệm trà Mầm (Đông Bắc Ga)</option>
+                        <option value="GacXep">Cafe Gác Xép (Lê Hoàn)</option>
+                        <option value="VuonUom">Vườn ươm Xanh (Quảng Xương)</option>
+                        <option value="Other">Khác</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold mb-1">Upload Ảnh *</label>
+                    <div class="border-2 border-dashed border-ink-black rounded-xl p-6 text-center bg-blue-50 relative hover:bg-blue-100 transition-colors cursor-pointer" onclick="document.getElementById('momentImage').click()">
+                        <div id="imagePreview" class="hidden absolute inset-0 bg-cover bg-center rounded-xl z-20 w-full h-full border-2 border-ink-black"></div>
+                        <span class="text-4xl block mb-2 relative z-10">📸</span>
+                        <span class="font-bold underline text-blue-600 relative z-10">Bấm để chọn ảnh từ máy</span>
+                        <input type="file" id="momentImage" required accept="image/*" class="hidden z-0" onchange="previewImage(event)">
+                    </div>
+                    <p class="text-xs text-center mt-1 text-gray-500">(Chấp nhận định dạng JPG, PNG. Tối đa 5MB)</p>
+                </div>
+                <div>
+                    <label class="block font-bold mb-1">Chú thích ảnh / Tựa đề *</label>
+                    <input type="text" id="momentCaption" required class="w-full border-2 border-ink-black rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-mint-green bg-gray-50 handwriting text-xl" placeholder="VD: Hôm nay mình đổi được bé sen đá xinh!">
+                </div>
+                <button type="submit" class="w-full bg-mint-green hover:bg-green-400 text-ink-black font-bold text-xl py-3 rounded-xl border-2 border-ink-black shadow-[4px_4px_0px_#2c3e50] transform hover:-translate-y-1 transition-transform mt-4">
+                    Gửi Lên Trạm 🚀
+                </button>
+            </form> -->
+        <!-- </div>
+    </div>
+ -->
+
+    <!-- Custom Alert Notification (Thế chỗ alert xấu xí) -->
+    <div id="custom-alert" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
+        <div class="relative bg-[#fdfaf5] max-w-sm w-full rounded-2xl border-4 border-[#2d5a37] shadow-[8px_8px_0px_#2d5a37] p-8 transform scale-95 transition-transform duration-300 text-center">
+            <div id="alert-tape" class="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-[#a8c5a0]/80 transform rotate-2 border border-[#2d5a37]/30 shadow-sm z-30"></div>
+            <div id="alert-icon" class="mb-4">
+                <svg class="w-16 h-16 mx-auto animate-bounce" fill="none" stroke="#2d5a37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 64 64">
+                    <path d="M32 56 C22 48 10 38 14 24 C18 14 28 16 32 22 C36 16 46 14 50 24 C54 38 42 48 32 56Z" fill="#a8c5a0"/>
+                    <path d="M32 22 Q30 38 32 56" stroke="#2d5a37" stroke-width="1.2"/>
+                </svg>
+            </div>
+            <h3 id="alert-title" class="text-3xl handwriting font-bold mb-2 text-[#2d5a37] border-b-2 border-dashed border-[#2d5a37] pb-2 inline-block">Thành Công!</h3>
+            <p id="alert-message" class="text-[#5c4a2e]/80 font-bold handwriting text-2xl mb-8 mt-2">Cảm ơn bạn đã đăng ký!</p>
+            <button type="button" onclick="closeCustomAlert()" class="btn w-full text-center bg-[#2d5a37] text-[#e8d5b0] border-[#3a2e1e] hover:bg-[#5c8c5e] shadow-[4px_4px_0_#3a2e1e] rounded-xl py-3 transform hover:-translate-y-1 transition-transform">Tuyệt vời!</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <script src="script.js"></script>
+</body>
+</html>

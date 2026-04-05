@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;600;700&family=Caveat:wght@400;600;700&display=swap');
+
+/* =============================================
+   COLOUR PALETTE — Dark Green + Warm Brown
+   ============================================= */
+:root {
+    /* Primary */
+    --forest-green:  #2d5a37;   /* deep forest */
+    --sage-green:    #5c8c5e;   /* mid sage */
+    --mint-light:    #a8c5a0;   /* light accent */
+    
+    /* Warm neutrals */
+    --kraft-dark:    #8b6914;   /* dark kraft */
+    --kraft-mid:     #c9a96e;   /* mid kraft/tan */
+    --kraft-light:   #e8d5b0;   /* light kraft paper */
+    --cream:         #f5ede1;   /* cream page bg */
+    --off-white:     #fdfaf5;   /* brightest card */
+    
+    /* Ink */
+    --ink:           #3a2e1e;   /* darkest text */
+    --ink-mid:       #5c4a2e;   /* body text */
+    --ink-light:     #8b7355;   /* muted text */
+
+    /* UI */
+    --glass: rgba(245, 237, 225, 0.65);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-hard: 4px 4px 0 rgba(45, 90, 55, 0.55);
+    --shadow-soft: 2px 4px 12px rgba(58, 46, 30, 0.15);
+    
+    /* Legacy alias (kept for Tailwind inline classes) */
+    --mint-green:    var(--mint-light);
+    --butter-yellow: var(--kraft-light);
+    --baby-blue:     #a3bdb5;
+    --ink-black:     var(--ink-mid);
+    --paper-bg:      var(--cream);
+    --vintage-brown: var(--kraft-mid);
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+    /* subtle paper grain */
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, .typewriter-font {
+    font-family: 'Courier Prime', monospace;
+    color: var(--ink);
+}
+
+.handwriting { font-family: 'Caveat', cursive; }
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 2rem;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px dashed var(--forest-green);
+    border-radius: 0 0 12px 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.shadow-sm {
+    padding: 0.65rem 2rem;
+    background: rgba(245, 237, 225, 0.97);
+    box-shadow: 0 3px 0 var(--forest-green);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    position: relative;
+    padding: 0.4rem 0;
+    transition: color 0.25s;
+}
+
+.nav-links li a:hover { color: var(--forest-green); }
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--forest-green);
+    transition: width 0.3s ease;
+}
+.nav-links li a:hover::after { width: 100%; }
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn {
+    padding: 11px 30px;
+    background-color: var(--forest-green);
+    color: var(--cream);
+    text-decoration: none;
+    border: 2px solid var(--ink);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-shadow: 3px 3px 0 var(--ink);
+    transition: var(--transition);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+    background-color: var(--sage-green);
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25%       { transform: rotate(-2deg); }
+    75%       { transform: rotate(2deg); }
+}
+
+/* =============================================
+   CARD DOODLE  (Scrapbook / Paper offcuts)
+   ============================================= */
+.card-doodle {
+    background: var(--off-white);
+    border: 2px solid var(--ink);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 2rem;
+    box-shadow: 4px 4px 0 rgba(58,46,30,.14);
+    transition: var(--transition);
+    position: relative;
+}
+
+/* Washi-tape strip on top */
+.card-doodle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 60px; height: 18px;
+    background: rgba(168, 197, 160, 0.65); /* sage washi */
+    border: 1px solid rgba(45,90,55,.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.06);
+}
+
+.card-doodle:hover {
+    transform: translateY(-4px) rotate(0.8deg);
+    box-shadow: 7px 7px 0 rgba(45,90,55,.2);
+}
+
+/* =============================================
+   COLOUR UTILITIES
+   ============================================= */
+.bg-mint-green  { background-color: var(--mint-light); }
+.bg-baby-blue   { background-color: var(--baby-blue); }
+.bg-butter      { background-color: var(--kraft-light); }
+.bg-mint        { background-color: var(--mint-light); }
+
+/* =============================================
+   TIMELINE (Section 3)
+   ============================================= */
+.timeline-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 2rem 0;
+    scrollbar-width: none;
+}
+.timeline-container::-webkit-scrollbar { display: none; }
+.timeline-item {
+    scroll-snap-align: center;
+    flex: 0 0 80%;
+    max-width: 400px;
+}
+
+/* =============================================
+   WAVY DIVIDER
+   ============================================= */
+.wavy-divider {
+    width: 100%;
+    height: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%232d5a37'/%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%232d5a37'/%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%232d5a37'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+/* =============================================
+   MISC UTILITY
+   ============================================= */
+html { scroll-behavior: smooth; }
+.section { scroll-margin-top: 100px; padding: 4rem 0; }
+
+/* Sprout enter animation */
+.sprout-target {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.sprouted { opacity: 1; transform: none; }
+
+/* =============================================
+   FORMS
+   ============================================= */
+input, textarea, select {
+    background: transparent;
+    border: none;
+    border-bottom: 2px dashed var(--forest-green);
+    padding: 10px 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    outline: none;
+    transition: var(--transition);
+}
+input:focus, textarea:focus, select:focus {
+    border-bottom-color: var(--sage-green);
+    background: rgba(255,255,255,0.5);
+}
+
+/* =============================================
+   CUSTOM SCROLLBAR
+   ============================================= */
+.custom-scrollbar::-webkit-scrollbar { width: 7px; }
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(45,90,55,0.08);
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(45,90,55,0.35);
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(45,90,55,0.65);
+}
+
+/* =============================================
+   CURSOR TRAIL
+   ============================================= */
+.cursor-leaf {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 1.4rem;
+    animation: floatLeaf 0.85s ease-out forwards;
+    transform-origin: center;
+}
+@keyframes floatLeaf {
+    0%   { opacity:1; transform: translate(-50%,-50%) scale(0.5) rotate(0deg); }
+    100% { opacity:0; transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.2) rotate(var(--rot)); }
+}
+
+/* =============================================
+   STAMP / LABEL helpers
+   ============================================= */
+.stamp {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 2px solid var(--forest-green);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--forest-green);
+    transform: rotate(-2deg);
+    opacity: 0.85;
+}
+.stamp-filled {
+    background: var(--forest-green);
+    color: var(--cream);
+}
+
+/* =============================================
+   POLAROID PHOTO CARDS
+   ============================================= */
+.polaroid {
+    background: #fff;
+    padding: 6px 6px 28px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 3px 10px rgba(58,46,30,0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.polaroid:hover {
+    transform: scale(1.07) rotate(0deg) !important;
+    box-shadow: 6px 8px 20px rgba(58,46,30,0.25);
+    z-index: 50;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+    #growing-tree { right: 4px; bottom: 4px; width: 10px; }
+}

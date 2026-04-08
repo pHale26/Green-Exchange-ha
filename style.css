@@ -218,11 +218,49 @@ h1, h2, h3, h4, .typewriter-font {
 html { scroll-behavior: smooth; }
 .section { scroll-margin-top: 100px; padding: 4rem 0; }
 
-/* Sprout enter animation */
-.sprout-target {
+/* Performance optimizations & Animations */
+.hero-content {
+    animation: fadeInScale 1.2s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+.animate-float {
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Global Scroll Reveal */
+.reveal {
     opacity: 0;
-    transform: translateY(16px) scale(0.98);
-    transition: opacity .7s ease, transform .7s ease;
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+    visibility: hidden;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+/* Staggered Delay for grid items */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Custom Scroll Selection */
+::selection {
+    background-color: #2d5a37;
+    color: #e8d5b0;
 }
 .sprouted { opacity: 1; transform: none; }
 
@@ -318,3 +356,37 @@ input:focus, textarea:focus, select:focus {
 @media (max-width: 768px) {
     #growing-tree { right: 4px; bottom: 4px; width: 10px; }
 }
+
+/* =============================================
+   GUIDE SECTION ANIMATIONS
+   ============================================= */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50% { transform: translateY(-10px) rotate(calc(var(--rot, 0deg) + 2deg)); }
+}
+
+.card-doodle .w-24 {
+    --rot: -3deg;
+    animation: float 4s ease-in-out infinite;
+}
+
+.card-doodle:nth-child(2) .w-24 {
+    --rot: 3deg;
+    animation-delay: -1s;
+}
+
+.card-doodle:nth-child(3) .w-24 {
+    --rot: -2deg;
+    animation-delay: -2s;
+}
+
+/* Seasonal Cards Hover */
+.group:hover .font-serif {
+    color: var(--mint-light);
+    transform: scale(1.1) rotate(-5deg);
+    transition: all 0.3s ease;
+}
+
+/* Washi tape variants */
+.washi-tape-green { background: rgba(168, 197, 160, 0.7); }
+.washi-tape-tan { background: rgba(201, 169, 110, 0.7); }

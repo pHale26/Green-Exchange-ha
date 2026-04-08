@@ -103,6 +103,73 @@ document.addEventListener('DOMContentLoaded', () => {
   const leafVein = document.getElementById('leaf-vein');
   
   const onScroll = () => {
+    // Progress Bar Logic
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const scrollBar = document.getElementById("scrollProgress");
+    if (scrollBar) {
+        scrollBar.style.width = scrolled + "%";
+    }
+
+    // Story Section Animations & Side Index
+    const storySection = document.getElementById('story');
+    const storyIndex = document.getElementById('story-index');
+    const storyCards = document.querySelectorAll('.story-card');
+    const indexGroups = document.querySelectorAll('#story-index .group');
+
+    const storyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Show/Hide the fixed index side-menu
+                storyIndex.classList.remove('opacity-0');
+                storyIndex.classList.add('opacity-100');
+
+                // Activate contents inside the card
+                const contents = entry.target.querySelectorAll('.reveal-content');
+                contents.forEach(content => {
+                    content.classList.remove('opacity-0', 'translate-y-10', '-translate-x-10', 'translate-x-10');
+                    content.classList.add('opacity-100', 'translate-y-0', 'translate-x-0');
+                });
+
+                // Update side index state
+                const step = entry.target.dataset.step;
+                indexGroups.forEach(group => {
+                    if (group.dataset.index === step) {
+                        group.classList.add('active');
+                    } else {
+                        group.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    storyCards.forEach(card => storyObserver.observe(card));
+
+    // Global Scroll Reveal Observer
+    const globalRevealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => globalRevealObserver.observe(el));
+
+    // Hide story index when leaving the story section
+    const sectionObserver = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) {
+            storyIndex.classList.remove('opacity-100');
+            storyIndex.classList.add('opacity-0');
+        }
+    }, { threshold: 0 });
+    sectionObserver.observe(storySection);
+
     if (window.scrollY > 10) {
       nav.classList.add('shadow-sm');
     } else {
@@ -499,22 +566,22 @@ function findNearestStation() {
             stationAddress = 'KĐT Đông Bắc Ga, P. Đông Thọ, Thanh Hóa';
             mapLink = 'https://maps.google.com/?q=Đông+Bắc+Ga+Thanh+Hóa';
             distance = (Math.random() * 1.5 + 0.2).toFixed(1); // 0.2 - 1.7 km
-        } else if (input.includes('điện biên') || input.includes('lê hoàn') || input.includes('ba đình') || input.includes('ngọc trạo') || input.includes('gác xép')) {
-            stationName = 'Cafe Gác Xép';
-            stationAddress = 'Đường Lê Hoàn, P. Điện Biên, Thanh Hóa';
-            mapLink = 'https://maps.google.com/?q=Đường+Lê+Hoàn+Thanh+Hóa';
+        } else if (input.includes('điện biên') || input.includes('lê hoàn') || input.includes('ba đình') || input.includes('ngọc trạo') || input.includes('lam sơn') || input.includes('trần phú')) {
+            stationName = 'Cà Phê Sân Vườn';
+            stationAddress = '28 Trần Phú, P. Lam Sơn, Thanh Hóa';
+            mapLink = 'https://maps.google.com/?q=28+Trần+Phú+Thanh+Hóa';
             distance = (Math.random() * 1.5 + 0.2).toFixed(1); 
-        } else if (input.includes('quảng trường') || input.includes('lam sơn') || input.includes('trường thi') || input.includes('đông hương') || input.includes('chuyến xe')) {
-            stationName = 'Chuyến Xe Xanh (Lưu động)';
-            stationAddress = 'Khu vực Quảng trường Lam Sơn, Thanh Hóa (Sáng CN)';
+        } else if (input.includes('quảng trường') || input.includes('đông hương') || input.includes('dự án')) {
+            stationName = 'Điểm Tập Kết: Quảng Trường Lam Sơn';
+            stationAddress = 'Quảng trường Lam Sơn, Thanh Hóa (Sáng Chủ Nhật)';
             mapLink = 'https://maps.google.com/?q=Quảng+trường+Lam+Sơn+Thanh+Hóa';
             distance = (Math.random() * 1.5 + 0.2).toFixed(1);
         } else {
             // Random assignment if no keyword matched
             const stations = [
-                { name: 'Tiệm Trà Mầm', addr: 'KĐT Đông Bắc Ga, P. Đông Thọ', link: 'https://maps.google.com/?q=Đông+Bắc+Ga+Thanh+Hóa' },
-                { name: 'Cafe Gác Xép', addr: 'Đường Lê Hoàn, P. Điện Biên', link: 'https://maps.google.com/?q=Đường+Lê+Hoàn+Thanh+Hóa' },
-                { name: 'Chuyến Xe Xanh (Lưu động)', addr: 'Quảng trường Lam Sơn (Sáng CN)', link: 'https://maps.google.com/?q=Quảng+trường+Lam+Sơn+Thanh+Hóa' }
+                { name: 'Tiệm Trà Mầm', addr: 'KĐT Đông Bắc Ga, Thanh Hóa', link: 'https://maps.google.com/?q=Đông+Bắc+Ga+Thanh+Hóa' },
+                { name: 'Cà Phê Sân Vườn', addr: '28 Trần Phú, Lam Sơn', link: 'https://maps.google.com/?q=28+Trần+Phú+Thanh+Hóa' },
+                { name: 'Quảng Trường Lam Sơn', addr: 'Quảng trường Lam Sơn (Sáng CN)', link: 'https://maps.google.com/?q=Quảng+trường+Lam+Sơn+Thanh+Hóa' }
             ];
             const randomPick = stations[Math.floor(Math.random() * stations.length)];
             stationName = randomPick.name;
@@ -534,3 +601,88 @@ function findNearestStation() {
         
     }, 1500); // 1.5s delay to simulate calculation
 }
+
+function clearSearch() {
+    const input = document.getElementById('addressInput');
+    const resultBox = document.getElementById('searchResult');
+    const clearBtn = document.getElementById('clearBtn');
+    
+    input.value = '';
+    resultBox.classList.add('hidden');
+    resultBox.classList.remove('flex');
+    clearBtn.classList.add('hidden');
+    input.focus();
+}
+
+// Logic cho Form Đăng Ký (Gửi vị trí)
+function toggleLocationField() {
+    const roleSelect = document.getElementById('role-select');
+    const locationTrigger = document.getElementById('location-trigger');
+    
+    if (roleSelect && roleSelect.value === 'donate') {
+        locationTrigger.classList.remove('hidden');
+    } else {
+        locationTrigger.classList.add('hidden');
+    }
+}
+
+function getUserLocation() {
+    const btn = document.getElementById('location-btn');
+    const status = document.getElementById('location-status');
+    const locationInput = document.getElementById('location-input');
+
+    if (!navigator.geolocation) {
+        status.textContent = "Trình duyệt của bạn không hỗ trợ định vị.";
+        return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = `
+        <svg class="w-6 h-6 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Đang lấy tọa độ...</span>
+    `;
+
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const mapsLink = `https://www.google.com/maps?q=${lat},${lng}`;
+            
+            locationInput.value = mapsLink;
+            
+            btn.classList.add('bg-green-600');
+            btn.innerHTML = `
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                <span>Đã Gửi Vị Trí Thành Công!</span>
+            `;
+            status.textContent = "Hệ thống đã ghi nhận tọa độ của bạn.";
+        },
+        (error) => {
+            btn.disabled = false;
+            btn.innerHTML = `
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span>Thử lại (Lỗi định vị)</span>
+            `;
+            status.textContent = "Lỗi: " + error.message;
+        }
+    );
+}
+
+// Show/Hide clear button while typing
+document.addEventListener('DOMContentLoaded', () => {
+    const addressInput = document.getElementById('addressInput');
+    const clearBtn = document.getElementById('clearBtn');
+    
+    if (addressInput && clearBtn) {
+        addressInput.addEventListener('input', () => {
+            if (addressInput.value.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+        });
+    }
+});

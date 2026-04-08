@@ -310,228 +310,150 @@
             </div>
         </div>
     </section>
-
-    <div class="wavy-divider" style="transform: scaleY(-1);"></div>
-
-    <!-- Bảng Quy Đổi Chi Tiết -->
-    <section id="exchange-rules" class="section py-16 relative" style="background:#f5ede1">
+ <!-- Section 4: Bảng Quy Đổi (Exchange Matrix) -->
+    <section id="exchange-rules" class="section py-32 relative overflow-hidden bg-[#faf8f4]">
+        <!-- Decor Background Shapes -->
         <div
-            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/rice-paper.png')] opacity-30">
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2d5a37]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none">
         </div>
-        <div class="max-w-5xl mx-auto px-6 relative z-10">
-            <div class="relative overflow-hidden border-4 border-[#2d5a37] shadow-[8px_8px_0_#2d5a37] bg-[#fdfaf5]"
-                style="border-radius:4px 255px 4px 255px/255px 4px 255px 4px">
-                <!-- Washi tape clip -->
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#c9a96e]/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-24 reveal">
                 <div
-                    class="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-5 bg-[#a8c5a0]/70 transform -rotate-2 border border-[#2d5a37]/30 shadow-sm">
+                    class="inline-flex items-center gap-3 px-6 py-2 bg-white rounded-full border border-[#2d5a37]/10 shadow-sm mb-8">
+                    <span class="w-2 h-2 bg-[#2d5a37] rounded-full animate-ping"></span>
+                    <span class="text-[10px] font-black tracking-[0.4em] text-[#2d5a37] uppercase">Economy of
+                        Kindness</span>
+                </div>
+                <h2 class="text-6xl md:text-9xl font-black text-[#2d5a37] tracking-tighter leading-none mb-8">Bảng
+                    <br><span class="text-[#c9a96e]">Quy Đổi</span></h2>
+                <p class="text-xl text-[#5c4a3d]/70 font-medium max-w-2xl mx-auto leading-relaxed italic">
+                    "Trao đi rác thải - Nhận lại mầm xanh. Hành trình hồi sinh bắt đầu từ đôi bàn tay bạn."
+                </p>
+            </div>
+
+            <!-- Rules Grid: Premium Glass Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal reveal-delay-2">
+
+                <!-- Category 1: Giấy -->
+                <div
+                    class="group relative bg-white p-12 rounded-[4rem] border border-[#2d5a37]/5 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_90px_rgba(45,90,55,0.08)] transition-all duration-700 hover:-translate-y-6">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-[#2d5a37]/5 rounded-bl-[4rem] group-hover:w-full group-hover:h-full group-hover:rounded-none transition-all duration-700 -z-10 opacity-0 group-hover:opacity-100">
+                    </div>
+                    <div
+                        class="w-24 h-24 bg-[#fdfaf5] rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
+                        <span class="text-6xl">📄</span>
+                    </div>
+                    <h4 class="text-3xl font-black text-[#2d5a37] mb-4">Giấy Vụn</h4>
+                    <p class="text-sm text-[#5c4a3d]/50 font-medium mb-10 leading-relaxed">Sách cũ, báo, thùng carton
+                        hay giấy văn phòng đã dùng.</p>
+                    <div class="pt-8 border-t border-[#2d5a37]/5 flex items-baseline gap-3">
+                        <span class="text-5xl font-black text-[#2d5a37]">1</span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-black text-[#c9a96e] uppercase tracking-[0.2em]">KG rác
+                                =</span>
+                            <span class="text-sm font-black text-[#2d5a37] uppercase tracking-widest">1 Mầm Sen</span>
+                        </div>
+                    </div>
                 </div>
 
-                <h2 class="text-4xl font-bold text-center mt-6 mb-2 text-[#2d5a37]">Nhật Ký Gieo Mầm</h2>
-                <p class="text-center text-xl handwriting mb-12 text-[#8b7355]">&ldquo;Gom bao nhiêu rác, đổi quà thế
-                    nào?&rdquo;</p>
-
-                <div class="relative py-8">
-                    <!-- Đường gân lá trung tâm -->
-                    <div id="leaf-vein"
-                        class="absolute left-1/2 top-0 w-0.5 bg-[#2d5a37] border-l-2 border-dashed border-[#2d5a37]/40 h-full -translate-x-1/2 origin-top transition-transform duration-500 ease-out"
-                        style="transform:scaleY(0)"></div>
-
-                    <div class="space-y-14">
-
-                        <!-- Rule 1: Giấy → Hạt giống -->
-                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
-                            <div class="w-5/12 text-right pr-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-2 group-hover:-rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#e8d5b0">
-                                    <!-- SVG: báo cũ cuộn -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <rect x="6" y="10" width="28" height="30" rx="2" fill="#fdfaf5"
-                                            stroke="#3a2e1e" />
-                                        <line x1="11" y1="17" x2="29" y2="17" />
-                                        <line x1="11" y1="22" x2="29" y2="22" />
-                                        <line x1="11" y1="27" x2="22" y2="27" />
-                                        <path d="M34 10 C42 10 42 40 34 40" stroke="#2d5a37" fill="none" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">2kg Giấy vụn / Báo cũ</strong>
-                                </div>
-                            </div>
-                            <!-- Nhánh -->
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full">
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2d5a37] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="#e8d5b0" stroke="#e8d5b0" viewBox="0 0 16 16">
-                                    <path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z" />
-                                </svg>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2">
-                            </div>
-                            <div class="w-5/12 pl-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-1 group-hover:rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#d5e8d4">
-                                    <!-- SVG: hạt giống -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <ellipse cx="24" cy="28" rx="10" ry="8" fill="#a8c5a0" />
-                                        <path d="M24 28 Q22 18 24 10" stroke="#2d5a37" />
-                                        <path d="M24 18 Q18 14 14 16" stroke="#5c8c5e" />
-                                        <path d="M24 22 Q30 18 34 20" stroke="#5c8c5e" />
-                                        <circle cx="24" cy="10" r="3" fill="#c9a96e" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">01 Gói hạt giống hoa</strong>
-                                    <p class="text-sm handwriting text-[#5c4a2e]">(Cúc / Hướng dương)</p>
-                                </div>
-                            </div>
+                <!-- Category 2: Nhựa -->
+                <div
+                    class="group relative bg-white p-12 rounded-[4rem] border border-[#2d5a37]/5 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_90px_rgba(201,169,110,0.12)] transition-all duration-700 hover:-translate-y-6">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-[#c9a96e]/5 rounded-bl-[4rem] group-hover:w-full group-hover:h-full group-hover:rounded-none transition-all duration-700 -z-10 opacity-0 group-hover:opacity-100">
+                    </div>
+                    <div
+                        class="w-24 h-24 bg-[#fdfaf5] rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
+                        <span class="text-6xl">🥤</span>
+                    </div>
+                    <h4 class="text-3xl font-black text-[#2d5a37] mb-4">Nhựa Sạch</h4>
+                    <p class="text-sm text-[#5c4a3d]/50 font-medium mb-10 leading-relaxed">Chai pet, can nhựa, các loại
+                        vỏ nhựa đồ gia dụng hằng ngày.</p>
+                    <div class="pt-8 border-t border-[#2d5a37]/5 flex items-baseline gap-3">
+                        <span class="text-5xl font-black text-[#2d5a37]">5</span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-black text-[#c9a96e] uppercase tracking-[0.2em]">KG rác
+                                =</span>
+                            <span class="text-sm font-black text-[#2d5a37] uppercase tracking-widest">1 Túi Vải</span>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Rule 2: Carton → Sen đá -->
-                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
-                            <div class="w-5/12 text-right pr-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-2 group-hover:rotate-1 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#e8d5b0">
-                                    <!-- SVG: hộp carton -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <path d="M8 20 L8 40 L40 40 L40 20" fill="#c9a96e" stroke="#3a2e1e" />
-                                        <path d="M4 14 L24 8 L44 14 L40 20 L8 20 Z" fill="#e8d5b0" stroke="#3a2e1e" />
-                                        <path d="M24 8 L24 20" stroke="#3a2e1e" />
-                                        <path d="M16 20 L16 30" stroke="#3a2e1e" stroke-dasharray="2 2" />
-                                        <path d="M32 20 L32 30" stroke="#3a2e1e" stroke-dasharray="2 2" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">5kg Bìa carton</strong>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full">
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2d5a37] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="#e8d5b0" stroke="#e8d5b0" viewBox="0 0 16 16">
-                                    <path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z" />
-                                </svg>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2">
-                            </div>
-                            <div class="w-5/12 pl-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-2 group-hover:-rotate-1 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#d5e8d4">
-                                    <!-- SVG: chậu sen đá -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <path d="M16 36 L14 44 L34 44 L32 36 Z" fill="#c9a96e" stroke="#3a2e1e" />
-                                        <ellipse cx="24" cy="36" rx="10" ry="4" fill="#a8c5a0" stroke="#2d5a37" />
-                                        <path d="M24 36 L24 26" stroke="#2d5a37" />
-                                        <path d="M24 30 Q18 26 16 20" stroke="#5c8c5e" />
-                                        <path d="M24 30 Q30 26 32 20" stroke="#5c8c5e" />
-                                        <path d="M24 26 Q20 22 20 16" stroke="#a8c5a0" />
-                                        <path d="M24 26 Q28 22 28 16" stroke="#a8c5a0" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">01 Chậu Sen đá mini</strong>
-                                    <p class="text-sm handwriting text-[#5c4a2e]">(Vỉ vạn thọ)</p>
-                                </div>
-                            </div>
+                <!-- Category 3: Kim Loại -->
+                <div
+                    class="group relative bg-[#2d5a37] p-12 rounded-[4rem] shadow-2xl hover:shadow-emerald-900/40 transition-all duration-700 hover:-translate-y-6">
+                    <div
+                        class="w-24 h-24 bg-white/10 rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
+                        <span class="text-6xl">🥫</span>
+                    </div>
+                    <h4 class="text-3xl font-black text-white mb-4 italic">Kim Loại</h4>
+                    <p class="text-sm text-white/50 font-medium mb-10 leading-relaxed">Lon nhôm, sắt vụn, vỏ đồ hộp đã
+                        qua sử dụng và làm sạch.</p>
+                    <div class="pt-8 border-t border-white/10 flex items-baseline gap-3">
+                        <span class="text-5xl font-black text-[#c9a96e]">2</span>
+                        <div class="flex flex-col text-white">
+                            <span class="text-[10px] font-black opacity-40 uppercase tracking-[0.2em]">KG rác =</span>
+                            <span class="text-sm font-black uppercase tracking-widest">1 Cây Để Bàn</span>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Rule 3: Chai nhựa → Bookmark -->
-                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
-                            <div class="w-5/12 text-right pr-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-1 group-hover:-rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#e8d5b0">
-                                    <!-- SVG: chai nhựa -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <path
-                                            d="M18 12 L18 8 L30 8 L30 12 Q34 16 34 22 L34 40 Q34 44 24 44 Q14 44 14 40 L14 22 Q14 16 18 12Z"
-                                            fill="#a8c5a0" stroke="#2d5a37" />
-                                        <line x1="14" y1="26" x2="34" y2="26" stroke="#fdfaf5" stroke-width="1" />
-                                        <ellipse cx="24" cy="8" rx="6" ry="2" fill="#c9a96e" stroke="#3a2e1e" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">10 Vỏ chai / Lon nhôm</strong>
-                                    <p class="text-sm handwriting text-[#5c4a2e]">(Đã súc sạch)</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full">
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2d5a37] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="#e8d5b0" stroke="#e8d5b0" viewBox="0 0 16 16">
-                                    <path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z" />
-                                </svg>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2">
-                            </div>
-                            <div class="w-5/12 pl-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-2 group-hover:rotate-1 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#d5e8d4">
-                                    <!-- SVG: bookmark -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <path d="M14 8 L34 8 L34 42 L24 34 L14 42 Z" fill="#c9a96e" stroke="#3a2e1e" />
-                                        <path d="M19 18 Q24 14 29 18" stroke="#2d5a37" stroke-width="1.5" />
-                                        <circle cx="24" cy="22" r="3" fill="#2d5a37" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">01 Bookmark vẽ tay</strong>
-                                    <p class="text-sm handwriting text-[#5c4a2e]">+ 01 túi phân bón nhỏ</p>
-                                </div>
-                            </div>
+                <!-- Category 4: Pin -->
+                <div
+                    class="group relative bg-white p-12 rounded-[4rem] border border-[#2d5a37]/5 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_90px_rgba(45,90,55,0.08)] transition-all duration-700 hover:-translate-y-6">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-[#2d5a37]/5 rounded-bl-[4rem] group-hover:w-full group-hover:h-full group-hover:rounded-none transition-all duration-700 -z-10 opacity-0 group-hover:opacity-100">
+                    </div>
+                    <div
+                        class="w-24 h-24 bg-[#fdfaf5] rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
+                        <span class="text-6xl">🔋</span>
+                    </div>
+                    <h4 class="text-3xl font-black text-[#2d5a37] mb-4">Pin Cũ</h4>
+                    <p class="text-sm text-[#5c4a3d]/50 font-medium mb-10 leading-relaxed">Pin tiểu, pin máy tính, pin
+                        các thiết bị điện tử hỏng.</p>
+                    <div class="pt-8 border-t border-[#2d5a37]/5 flex items-baseline gap-3">
+                        <span class="text-5xl font-black text-[#2d5a37]">10</span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] font-black text-[#c9a96e] uppercase tracking-[0.2em]">Viên pin
+                                =</span>
+                            <span class="text-sm font-black text-[#2d5a37] uppercase tracking-widest">Quà Bí Mật</span>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Rule 4: Sách → Sen đá đặc biệt -->
-                        <div class="flex items-center justify-between relative group sprout-target" data-sprout>
-                            <div class="w-5/12 text-right pr-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform -rotate-1 group-hover:rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#e8d5b0">
-                                    <!-- SVG: sách -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#3a2e1e" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <rect x="8" y="8" width="22" height="32" rx="2" fill="#a8c5a0"
-                                            stroke="#2d5a37" />
-                                        <rect x="14" y="8" width="22" height="32" rx="2" fill="#c9a96e"
-                                            stroke="#3a2e1e" />
-                                        <rect x="20" y="8" width="22" height="32" rx="2" fill="#fdfaf5"
-                                            stroke="#3a2e1e" />
-                                        <line x1="24" y1="16" x2="38" y2="16" stroke="#3a2e1e" stroke-width="1" />
-                                        <line x1="24" y1="20" x2="38" y2="20" stroke="#3a2e1e" stroke-width="1" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">03 Cuốn sách / Truyện</strong>
-                                    <p class="text-sm handwriting text-[#5c4a2e]">(Còn nguyên vẹn)</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2 -translate-x-full">
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c9a96e] border-4 border-[#fdfaf5] shadow z-10 flex items-center justify-center">
-                                <svg class="w-4 h-4" fill="#2d5a37" stroke="#2d5a37" viewBox="0 0 16 16">
-                                    <path d="M8 2C6 5 3 5 3 8c0 3 5 5 5 5s5-2 5-5c0-3-3-3-5-6z" />
-                                </svg>
-                            </div>
-                            <div
-                                class="absolute left-1/2 top-1/2 w-1/4 h-0 border-t-2 border-dashed border-[#2d5a37]/50 -translate-y-1/2">
-                            </div>
-                            <div class="w-5/12 pl-8">
-                                <div class="inline-block p-4 border-2 border-[#2d5a37] rounded-2xl transform rotate-1 group-hover:-rotate-2 transition-transform shadow-[3px_3px_0_#2d5a37]"
-                                    style="background:#d5e8d4">
-                                    <!-- SVG: sen đá đặc biệt -->
-                                    <svg class="w-14 h-14 mx-auto mb-2" fill="none" stroke="#2d5a37" stroke-width="1.8"
-                                        stroke-linecap="round" viewBox="0 0 48 48">
-                                        <ellipse cx="24" cy="30" rx="14" ry="6" fill="#2d5a37" />
-                                        <ellipse cx="24" cy="26" rx="10" ry="5" fill="#5c8c5e" />
-                                        <ellipse cx="24" cy="22" rx="7" ry="4" fill="#a8c5a0" />
-                                        <ellipse cx="24" cy="18" rx="4" ry="3" fill="#c9a96e" />
-                                        <ellipse cx="24" cy="15" rx="2" ry="2" fill="#e8d5b0" />
-                                    </svg>
-                                    <strong class="text-lg text-[#2d5a37]">01 Sen đá đặc biệt</strong>
-                                    <p class="text-sm handwriting text-[#5c4a2e]">(Phật bà / Cánh bướm)</p>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+
+            <!-- Premium Tips Bar -->
+            <div
+                class="mt-24 p-12 bg-white rounded-[3.5rem] border border-[#2d5a37]/5 shadow-xl reveal reveal-delay-3 flex flex-col lg:flex-row items-center justify-between gap-12 group">
+                <div class="flex items-center gap-8">
+                    <div
+                        class="w-20 h-20 bg-[#c9a96e] rounded-full flex items-center justify-center text-4xl shadow-xl shadow-[#c9a96e]/20 group-hover:rotate-12 transition-transform">
+                        💡</div>
+                    <div>
+                        <h5 class="text-2xl font-black text-[#2d5a37] mb-2">Lời ngỏ từ trạm Mầm</h5>
+                        <p class="text-[#5c4a3d]/60 text-sm font-medium leading-relaxed max-w-xl">Hành động nhỏ, ý nghĩa
+                            lớn. Vui lòng **làm sạch rác thải** (rửa sạch vỏ chai, phơi khô giấy) trước khi mang đến
+                            Trạm để mầm cây được "ở sạch" bạn nhé!</p>
+                    </div>
+                </div>
+                <a href="#volunteer"
+                    class="group relative px-10 py-5 bg-[#2d5a37] text-white rounded-full font-black text-xs uppercase tracking-[0.2em] overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#2d5a37]/20">
+                    <span class="relative z-10">Hướng Dẫn Phân Loại</span>
+                    <div
+                        class="absolute inset-0 bg-[#3d7048] -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-500">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="wavy-divider" style="transform: scaleY(-1);"></div>
 
                     </div>
                 </div>
@@ -686,9 +608,9 @@
                                 class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                             </div>
                         </a>
-                        <a href="#the-spot"
+                        <a href="#exchange-rules"
                             class="text-white/60 hover:text-white font-bold tracking-widest uppercase text-sm border-b border-white/20 pb-1 transition-all">Xem
-                            nhật ký gieo mầm</a>
+                            Bảng Quy Đổi</a>
                     </div>
                 </div>
             </div>
@@ -700,486 +622,9 @@
 
     <div class="wavy-divider"></div>
 
-    <!-- Section 4: Bảng Quy Đổi (Exchange Matrix) -->
-    <section id="exchange-rules" class="section py-32 relative overflow-hidden bg-[#faf8f4]">
-        <!-- Decor Background Shapes -->
-        <div
-            class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2d5a37]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none">
-        </div>
-        <div
-            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#c9a96e]/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none">
-        </div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-24 reveal">
-                <div
-                    class="inline-flex items-center gap-3 px-6 py-2 bg-white rounded-full border border-[#2d5a37]/10 shadow-sm mb-8">
-                    <span class="w-2 h-2 bg-[#2d5a37] rounded-full animate-ping"></span>
-                    <span class="text-[10px] font-black tracking-[0.4em] text-[#2d5a37] uppercase">Economy of
-                        Kindness</span>
-                </div>
-                <h2 class="text-6xl md:text-9xl font-black text-[#2d5a37] tracking-tighter leading-none mb-8">Bảng
-                    <br><span class="text-[#c9a96e]">Quy Đổi</span></h2>
-                <p class="text-xl text-[#5c4a3d]/70 font-medium max-w-2xl mx-auto leading-relaxed italic">
-                    "Trao đi rác thải - Nhận lại mầm xanh. Hành trình hồi sinh bắt đầu từ đôi bàn tay bạn."
-                </p>
-            </div>
-
-            <!-- Rules Grid: Premium Glass Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal reveal-delay-2">
-
-                <!-- Category 1: Giấy -->
-                <div
-                    class="group relative bg-white p-12 rounded-[4rem] border border-[#2d5a37]/5 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_90px_rgba(45,90,55,0.08)] transition-all duration-700 hover:-translate-y-6">
-                    <div
-                        class="absolute top-0 right-0 w-32 h-32 bg-[#2d5a37]/5 rounded-bl-[4rem] group-hover:w-full group-hover:h-full group-hover:rounded-none transition-all duration-700 -z-10 opacity-0 group-hover:opacity-100">
-                    </div>
-                    <div
-                        class="w-24 h-24 bg-[#fdfaf5] rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
-                        <span class="text-6xl">📄</span>
-                    </div>
-                    <h4 class="text-3xl font-black text-[#2d5a37] mb-4">Giấy Vụn</h4>
-                    <p class="text-sm text-[#5c4a3d]/50 font-medium mb-10 leading-relaxed">Sách cũ, báo, thùng carton
-                        hay giấy văn phòng đã dùng.</p>
-                    <div class="pt-8 border-t border-[#2d5a37]/5 flex items-baseline gap-3">
-                        <span class="text-5xl font-black text-[#2d5a37]">1</span>
-                        <div class="flex flex-col">
-                            <span class="text-[10px] font-black text-[#c9a96e] uppercase tracking-[0.2em]">KG rác
-                                =</span>
-                            <span class="text-sm font-black text-[#2d5a37] uppercase tracking-widest">1 Mầm Sen</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 2: Nhựa -->
-                <div
-                    class="group relative bg-white p-12 rounded-[4rem] border border-[#2d5a37]/5 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_90px_rgba(201,169,110,0.12)] transition-all duration-700 hover:-translate-y-6">
-                    <div
-                        class="absolute top-0 right-0 w-32 h-32 bg-[#c9a96e]/5 rounded-bl-[4rem] group-hover:w-full group-hover:h-full group-hover:rounded-none transition-all duration-700 -z-10 opacity-0 group-hover:opacity-100">
-                    </div>
-                    <div
-                        class="w-24 h-24 bg-[#fdfaf5] rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
-                        <span class="text-6xl">🥤</span>
-                    </div>
-                    <h4 class="text-3xl font-black text-[#2d5a37] mb-4">Nhựa Sạch</h4>
-                    <p class="text-sm text-[#5c4a3d]/50 font-medium mb-10 leading-relaxed">Chai pet, can nhựa, các loại
-                        vỏ nhựa đồ gia dụng hằng ngày.</p>
-                    <div class="pt-8 border-t border-[#2d5a37]/5 flex items-baseline gap-3">
-                        <span class="text-5xl font-black text-[#2d5a37]">5</span>
-                        <div class="flex flex-col">
-                            <span class="text-[10px] font-black text-[#c9a96e] uppercase tracking-[0.2em]">KG rác
-                                =</span>
-                            <span class="text-sm font-black text-[#2d5a37] uppercase tracking-widest">1 Túi Vải</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 3: Kim Loại -->
-                <div
-                    class="group relative bg-[#2d5a37] p-12 rounded-[4rem] shadow-2xl hover:shadow-emerald-900/40 transition-all duration-700 hover:-translate-y-6">
-                    <div
-                        class="w-24 h-24 bg-white/10 rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
-                        <span class="text-6xl">🥫</span>
-                    </div>
-                    <h4 class="text-3xl font-black text-white mb-4 italic">Kim Loại</h4>
-                    <p class="text-sm text-white/50 font-medium mb-10 leading-relaxed">Lon nhôm, sắt vụn, vỏ đồ hộp đã
-                        qua sử dụng và làm sạch.</p>
-                    <div class="pt-8 border-t border-white/10 flex items-baseline gap-3">
-                        <span class="text-5xl font-black text-[#c9a96e]">2</span>
-                        <div class="flex flex-col text-white">
-                            <span class="text-[10px] font-black opacity-40 uppercase tracking-[0.2em]">KG rác =</span>
-                            <span class="text-sm font-black uppercase tracking-widest">1 Cây Để Bàn</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category 4: Pin -->
-                <div
-                    class="group relative bg-white p-12 rounded-[4rem] border border-[#2d5a37]/5 shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_90px_rgba(45,90,55,0.08)] transition-all duration-700 hover:-translate-y-6">
-                    <div
-                        class="absolute top-0 right-0 w-32 h-32 bg-[#2d5a37]/5 rounded-bl-[4rem] group-hover:w-full group-hover:h-full group-hover:rounded-none transition-all duration-700 -z-10 opacity-0 group-hover:opacity-100">
-                    </div>
-                    <div
-                        class="w-24 h-24 bg-[#fdfaf5] rounded-[2.5rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform shadow-inner">
-                        <span class="text-6xl">🔋</span>
-                    </div>
-                    <h4 class="text-3xl font-black text-[#2d5a37] mb-4">Pin Cũ</h4>
-                    <p class="text-sm text-[#5c4a3d]/50 font-medium mb-10 leading-relaxed">Pin tiểu, pin máy tính, pin
-                        các thiết bị điện tử hỏng.</p>
-                    <div class="pt-8 border-t border-[#2d5a37]/5 flex items-baseline gap-3">
-                        <span class="text-5xl font-black text-[#2d5a37]">10</span>
-                        <div class="flex flex-col">
-                            <span class="text-[10px] font-black text-[#c9a96e] uppercase tracking-[0.2em]">Viên pin
-                                =</span>
-                            <span class="text-sm font-black text-[#2d5a37] uppercase tracking-widest">Quà Bí Mật</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Premium Tips Bar -->
-            <div
-                class="mt-24 p-12 bg-white rounded-[3.5rem] border border-[#2d5a37]/5 shadow-xl reveal reveal-delay-3 flex flex-col lg:flex-row items-center justify-between gap-12 group">
-                <div class="flex items-center gap-8">
-                    <div
-                        class="w-20 h-20 bg-[#c9a96e] rounded-full flex items-center justify-center text-4xl shadow-xl shadow-[#c9a96e]/20 group-hover:rotate-12 transition-transform">
-                        💡</div>
-                    <div>
-                        <h5 class="text-2xl font-black text-[#2d5a37] mb-2">Lời ngỏ từ trạm Mầm</h5>
-                        <p class="text-[#5c4a3d]/60 text-sm font-medium leading-relaxed max-w-xl">Hành động nhỏ, ý nghĩa
-                            lớn. Vui lòng **làm sạch rác thải** (rửa sạch vỏ chai, phơi khô giấy) trước khi mang đến
-                            Trạm để mầm cây được "ở sạch" bạn nhé!</p>
-                    </div>
-                </div>
-                <a href="#volunteer"
-                    class="group relative px-10 py-5 bg-[#2d5a37] text-white rounded-full font-black text-xs uppercase tracking-[0.2em] overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#2d5a37]/20">
-                    <span class="relative z-10">Hướng Dẫn Phân Loại</span>
-                    <div
-                        class="absolute inset-0 bg-[#3d7048] -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-500">
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Old paper overlay -->
-    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/old-wall.png')] opacity-30">
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="text-center mb-16">
-            <div class="inline-block relative">
-                <div class="absolute -top-6 -left-10 w-20 h-20 opacity-20 pointer-events-none">
-                    <svg viewBox="0 0 100 100" class="fill-[#2d5a37]">
-                        <path d="M50 0 L100 50 L50 100 L0 50 Z" />
-                    </svg>
-                </div>
-                <div
-                    class="bg-[#2d5a37] text-[#f4ebd0] px-12 py-5 rounded-sm shadow-[10px_10px_0_#705a45] transform -rotate-1 relative z-10 border-2 border-[#f4ebd0]/20">
-                    <h2 class="text-4xl md:text-5xl font-bold tracking-[0.2em] uppercase typewriter-font">TRẠM DỪNG TIẾP
-                        NỐI</h2>
-                </div>
-                <p class="text-2xl mt-8 handwriting text-[#5c4a3d] font-bold">Tìm trạm dừng chân gần bạn nhất để gieo
-                    mầm hy vọng!</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-            <!-- Left Column: Search "Ticket Booth" -->
-            <div class="lg:col-span-5 flex flex-col">
-                <div
-                    class="bg-white/90 backdrop-blur-md rounded-3xl p-10 border-4 border-[#8b7355] shadow-[12px_12px_0_#8b7355] relative h-full flex flex-col group overflow-hidden">
-                    <!-- Red corner stamps -->
-                    <div
-                        class="absolute top-4 right-4 w-12 h-12 border-2 border-red-800/20 rounded-full flex items-center justify-center rotate-12">
-                        <span class="text-[8px] font-bold text-red-800/30">APPROVED</span>
-                    </div>
-
-                    <h3
-                        class="font-bold text-3xl mb-6 text-[#5c4a3d] border-b-4 border-double border-[#8b7355] pb-4 flex items-center gap-3">
-                        <svg class="w-10 h-10 text-[#8b7355]" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        Tra Cứu Trạm Xanh
-                    </h3>
-
-                    <p class="mb-8 text-[#5c4a3d] text-lg leading-relaxed">
-                        Vui lòng nhập <span class="bg-[#f5ede1] px-2 font-bold">địa chỉ/phường</span> của bạn tại Thanh
-                        Hóa để hệ thống tự động tìm trạm thu gom tối ưu nhất.
-                    </p>
-
-                    <div class="relative mb-8">
-                        <input type="text" id="addressInput" placeholder="VD: Lê Hoàn, Đông Thọ..."
-                            class="w-full pl-14 pr-12 py-5 bg-[#fdfbf7] border-2 border-[#8b7355] rounded-2xl focus:ring-4 focus:ring-[#8b7355]/10 outline-none font-bold text-[#5c4a3d] placeholder-[#8b7355]/40 shadow-inner handwriting text-2xl">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#8b7355] opacity-60">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </span>
-                        <!-- Clear Button -->
-                        <button onclick="clearSearch()" id="clearBtn"
-                            class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-[#8b7355] hover:text-red-600 transition-colors hidden z-20">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <button onclick="findNearestStation()"
-                        class="w-full group bg-[#8b7355] hover:bg-[#2d5a37] text-[#fdfaf5] font-bold py-5 rounded-2xl transition-all shadow-[6px_6px_0_#3a2e1e] hover:shadow-[3px_3px_0_#3a2e1e] hover:translate-x-1 hover:translate-y-1">
-                        <span class="handwriting text-3xl">Lần Theo Dấu Vết Xanh →</span>
-                    </button>
-
-                    <!-- Search Result Container -->
-                    <div id="searchResult"
-                        class="mt-10 flex-1 bg-[#f4ebd0] border-4 border-dashed border-[#8b7355]/40 rounded-3xl p-8 hidden flex-col items-center justify-center relative overflow-hidden min-h-[300px]">
-                        <div
-                            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/recycled-paper.png')] opacity-40">
-                        </div>
-
-                        <!-- Loading State -->
-                        <div id="loadingState" class="hidden relative z-10 flex-col items-center gap-4">
-                            <div
-                                class="w-16 h-16 border-4 border-[#2d5a37] border-t-transparent rounded-full animate-spin">
-                            </div>
-                            <p class="text-[#2d5a37] font-bold handwriting text-2xl animate-pulse">Đang quét trạm gần
-                                bạn...</p>
-                        </div>
-
-                        <!-- Result Content: The 'Travel Compass' Design -->
-                        <div id="resultState" class="hidden relative z-10 w-full flex-col items-center animate-fade-in">
-                            <div
-                                class="w-20 h-20 bg-[#2d5a37] rounded-full flex items-center justify-center mb-6 shadow-xl border-4 border-[#e8d5b0] animate-bounce">
-                                <svg class="w-10 h-10 text-[#e8d5b0]" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" viewBox="0 0 24 24">
-                                    <path
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </div>
-
-                            <div
-                                class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border-2 border-[#2d5a37] w-full relative mb-6">
-                                <!-- Badge -->
-                                <div
-                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#c9a96e] text-[#3a2e1e] px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-sm">
-                                    Trạm Gần Nhất Được Tìm Thấy
-                                </div>
-
-                                <div class="mt-4 text-center">
-                                    <h4 id="resultStationName"
-                                        class="text-4xl font-bold text-[#2d5a37] handwriting mb-2">Trạm...</h4>
-                                    <p id="resultAddress"
-                                        class="text-[#5c4a3d] italic text-lg handwriting font-bold opacity-80 mb-4 truncate italic">
-                                        ...</p>
-
-                                    <div class="grid grid-cols-2 gap-4 border-t border-dashed border-[#2d5a37]/30 pt-4">
-                                        <div class="text-center">
-                                            <p class="text-[10px] uppercase font-bold text-[#8b7355] mb-1">Khoảng cách
-                                            </p>
-                                            <p id="resultDistance" class="text-2xl font-bold text-[#2d5a37]">... km</p>
-                                        </div>
-                                        <div class="text-center border-l border-dashed border-[#2d5a37]/30">
-                                            <p class="text-[10px] uppercase font-bold text-[#8b7355] mb-1">Thời gian đi
-                                            </p>
-                                            <p class="text-2xl font-bold text-[#2d5a37]">~10 Phút</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Maps Button -->
-                            <a id="resultMapLink" href="#" target="_blank"
-                                class="group flex items-center justify-center gap-4 w-full bg-[#8b7355] hover:bg-[#2d5a37] text-white p-5 rounded-2xl font-bold text-2xl handwriting transition-all shadow-[6px_6px_0_#3a2e1e] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
-                                <span>Chỉ đường trên Google Maps</span>
-                                <svg class="w-8 h-8 group-hover:translate-x-2 transition-transform" fill="none"
-                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path
-                                        d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Board & News -->
-            <div class="lg:col-span-7 relative">
-                <!-- Board Frame -->
-                <div
-                    class="absolute inset-0 bg-[#d9caad] rounded-2xl shadow-[inset_0_0_40px_rgba(0,0,0,0.5)] border-[12px] border-[#705a45] bg-[url('https://www.transparenttextures.com/patterns/cardboard-flat.png')]">
-                </div>
-
-                <div class="relative z-10 p-8 h-[650px] overflow-y-auto custom-scrollbar">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8">
-
-                        <!-- Station Card 1: Tiệm Trà Mầm -->
-                        <div
-                            class="bg-[#d9c5a0] p-7 pt-12 rounded-b-xl rounded-t-[50px] shadow-2xl relative border border-[#b8975c] transform rotate-1 hover:-rotate-1 transition-all duration-300 group">
-                            <div
-                                class="absolute top-5 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#3a2e1e] rounded-full shadow-inner border shadow-black/50">
-                            </div>
-                            <div
-                                class="absolute -top-12 left-1/2 -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-transparent to-[#3a2e1e]/40">
-                            </div>
-
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <p class="text-[10px] font-bold uppercase tracking-widest text-red-900/60 mb-1">
-                                        STATION #01</p>
-                                    <h4 class="text-3xl font-bold text-[#2d5a37] handwriting">Tiệm Trà Mầm</h4>
-                                </div>
-                                <div
-                                    class="p-3 bg-white/20 rounded-full border border-black/5 group-hover:rotate-12 transition-transform">
-                                    <svg class="w-10 h-10 text-[#2d5a37]" fill="none" stroke="currentColor"
-                                        stroke-width="2" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 3v1m0 16v1m9-9h-1M3 12h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-11.314l.707.707m11.314 11.314l.707-.707M12 17a5 5 0 100-10 5 5 0 000 10z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="border-t-2 border-dashed border-[#8b7355]/30 pt-4 space-y-3 text-sm">
-                                <p class="flex items-center gap-2 font-medium"><span class="opacity-50">📍</span> KĐT
-                                    Đông Bắc Ga, Thanh Hóa</p>
-                                <p class="flex items-center gap-2 font-medium"><span class="opacity-50">⏰</span> 08:00 –
-                                    21:00 (T2-T7)</p>
-                                <div class="bg-black/5 p-3 rounded-lg mt-4 italic handwriting text-lg text-[#3a2e1e]">
-                                    "Nơi rác cũ hồi sinh thành những mầm xanh mới."
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Station Card 2: Cà Phê Sân Vườn -->
-                        <div
-                            class="bg-[#fdfbf7] p-8 shadow-2xl relative transform -rotate-1 hover:rotate-1 transition-all duration-300 group overflow-hidden border-t-[10px] border-[#2d5a37]">
-                            <div class="absolute -right-10 -top-10 w-24 h-24 bg-[#2d5a37]/5 rounded-full"></div>
-                            <div class="text-center mb-6">
-                                <span class="stamp stamp-filled text-[10px] !p-1 !px-3">OFFICIAL STOP</span>
-                                <h4 class="text-3xl font-bold text-[#2d5a37] handwriting mt-4">Cà Phê Sân Vườn</h4>
-                                <p class="text-[10px] font-mono opacity-40 uppercase tracking-widest">28 Trần Phú, Lam
-                                    Sơn</p>
-                            </div>
-                            <div class="space-y-4 text-xs font-mono border-y border-dashed border-black/10 py-5">
-                                <div class="flex justify-between"><span>Lịch thu gom:</span><span
-                                        class="font-bold text-[#2d5a37]">T3 - T5 - T7</span></div>
-                                <div class="flex justify-between"><span>Giờ nhận:</span><span
-                                        class="font-bold text-[#2d5a37]">07:00 - 22:00</span></div>
-                            </div>
-                            <p class="mt-6 text-center text-xl handwriting text-[#8b7355] font-bold">Hãy ghé uống cafe
-                                và đổi xanh nhé!</p>
-                        </div>
-
-                        <!-- Schedule: Vintage Train Ticket -->
-                        <div class="md:col-span-2 relative mt-4">
-                            <div
-                                class="bg-[#f5ede1] rounded-xl p-1 shadow-2xl relative group transform hover:scale-[1.02] transition-transform">
-                                <!-- Perforation marks -->
-                                <div
-                                    class="absolute left-[30%] top-0 bottom-0 w-1 border-l-4 border-dashed border-[#e9e3d5] z-20">
-                                </div>
-
-                                <div class="flex flex-col md:flex-row border-4 border-[#2d5a37] rounded-lg">
-                                    <!-- Ticket Stub -->
-                                    <div
-                                        class="w-full md:w-[30%] bg-[#2d5a37] text-[#e8d5b0] p-8 text-center flex flex-col items-center justify-center relative">
-                                        <div
-                                            class="absolute -top-4 -right-4 w-8 h-8 bg-[#e9e3d5] rounded-full border-4 border-[#705a45]">
-                                        </div>
-                                        <div
-                                            class="absolute -bottom-4 -right-4 w-8 h-8 bg-[#e9e3d5] rounded-full border-4 border-[#705a45]">
-                                        </div>
-
-                                        <p class="text-[10px] font-bold tracking-[0.3em] uppercase opacity-60 mb-6">
-                                            Route Weekly</p>
-                                        <div
-                                            class="w-24 h-20 bg-[#e8d5b0]/10 rounded-full flex items-center justify-center mb-6 border-2 border-[#e8d5b0]/20">
-                                            <svg class="w-14 h-14" fill="currentColor" viewBox="0 0 20 20">
-                                                <path
-                                                    d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                                                <path
-                                                    d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05a2.5 2.5 0 014.9 0H19a1 1 0 001-1V9a1 1 0 00-1-1h-5z" />
-                                            </svg>
-                                        </div>
-                                        <h4 class="text-2xl font-bold font-serif">CHUYẾN XE XANH</h4>
-                                    </div>
-
-                                    <!-- Ticket Body -->
-                                    <div class="flex-1 p-8 bg-[#fdfbf7] relative">
-                                        <div class="absolute top-4 right-6 opacity-10">
-                                            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <p
-                                            class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#8b7355] mb-6">
-                                            Lịch trình vận chuyển & Điểm đến</p>
-
-                                        <div class="space-y-4">
-                                            <div class="flex items-center gap-4 group/item">
-                                                <span
-                                                    class="w-16 h-8 bg-[#8b7355] text-white rounded flex items-center justify-center text-[10px] font-bold">T3
-                                                    • T6</span>
-                                                <p
-                                                    class="text-sm font-medium text-[#3a2e1e] border-b border-dashed border-black/10 pb-1 flex-1 italic group-hover/item:border-[#2d5a37] transition-all">
-                                                    Gom Giấy, Báo cũ tại các Trạm (08:00 - 10:00)</p>
-                                            </div>
-                                            <div class="flex items-center gap-4 group/item">
-                                                <span
-                                                    class="w-16 h-8 bg-[#5c8c5e] text-white rounded flex items-center justify-center text-[10px] font-bold">THỨ
-                                                    5</span>
-                                                <p
-                                                    class="text-sm font-medium text-[#3a2e1e] border-b border-dashed border-black/10 pb-1 flex-1 italic group-hover/item:border-[#2d5a37] transition-all">
-                                                    Chuyển Nhựa, Lon nhôm tới trạm tái chế</p>
-                                            </div>
-                                            <div class="flex items-center gap-4 group/item">
-                                                <span
-                                                    class="w-16 h-8 bg-[#2d5a37] text-[#e8d5b0] rounded flex items-center justify-center text-[10px] font-bold">CHỦ
-                                                    NHẬT</span>
-                                                <p
-                                                    class="text-sm font-bold text-[#2d5a37] border-b border-dashed border-black/10 pb-1 flex-1 italic group-hover/item:border-[#2d5a37] transition-all">
-                                                    CHUYẾN XE VÙNG CAO: Mường Lát - Quan Sơn (07:00 Khởi hành)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Hub Placard: Quảng Trường Lam Sơn -->
-                        <div class="md:col-span-2 mt-6 relative group">
-                            <div
-                                class="bg-[#2d5a37] text-[#f5ede1] p-10 rounded-sm border-2 border-[#3a2e1e] shadow-[15px_15px_0_rgba(0,0,0,0.2)] transform -rotate-1 group-hover:rotate-0 transition-transform relative overflow-hidden">
-                                <div
-                                    class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
-                                </div>
-                                <div
-                                    class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2">
-                                </div>
-
-                                <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
-                                    <div
-                                        class="w-24 h-24 bg-[#e8d5b0] rounded-full border-4 border-[#3d7048] flex items-center justify-center flex-shrink-0 animate-pulse">
-                                        <span class="text-5xl">🏛️</span>
-                                    </div>
-                                    <div>
-                                        <h4
-                                            class="text-4xl font-bold handwriting mb-4 tracking-wide border-b-2 border-dashed border-[#e8d5b0]/30 pb-2">
-                                            Điểm Tập Kết: Quảng Trường Lam Sơn</h4>
-                                        <p class="text-2xl handwriting leading-relaxed">
-                                            Nơi hội quân mỗi <span
-                                                class="text-[#e8d5b0] font-bold underline decoration-dashed">Chủ Nhật
-                                                hàng tuần (08:00 - 11:00)</span>. Đội ngũ Green Exchange trực tiếp nhận
-                                            rác, trao cây và chuẩn bị hành trang cho những chuyến xe vùng cao rực rỡ!
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Corner Washi Tape -->
-                                <div
-                                    class="absolute top-4 left-4 w-24 h-8 washi-tape-tan opacity-40 transform -rotate-45">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-
+    <!-- Section 4: Bảng Quy Đổi (Exchange Matrix) - Hand-Drawn Premium Edition -->
+    
     <div class="wavy-divider" style="transform: scaleY(-1);"></div>
 
     <!-- Nhật Ký Mầm Xanh (The Spot) - Redesigned as a Premium Bento Grid -->

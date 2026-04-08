@@ -260,9 +260,56 @@ html { scroll-behavior: smooth; }
 /* Custom Scroll Selection */
 ::selection {
     background-color: #2d5a37;
-    color: #e8d5b0;
+    --tan: #e8d5b0;
 }
-.sprouted { opacity: 1; transform: none; }
+
+/* Hand-Drawn Sketch Styles */
+.sketch-card {
+    background: #fdfaf5;
+    border: 2px solid #3a2e1e;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 8px 8px 0 rgba(58, 46, 30, 0.05);
+}
+
+.sketch-card:hover {
+    transform: rotate(-1deg) translateY(-8px);
+    box-shadow: 15px 15px 0 rgba(58, 46, 30, 0.1);
+    border-color: #2d5a37;
+}
+
+.sketch-card::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border: 1px solid rgba(58, 46, 30, 0.1);
+    border-radius: 250px 20px 230px 20px/20px 230px 20px 250px;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sketch-card:hover::after {
+    inset: -10px;
+    border-color: rgba(45, 90, 55, 0.2);
+    transform: rotate(2deg);
+}
+
+.charcoal-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 2s ease-out;
+}
+
+.reveal.active .charcoal-path {
+    stroke-dashoffset: 0;
+}
+
+/* Sprout Elements */
+.sprouted { 
+    opacity: 1; 
+    transform: none; 
+}
 
 /* =============================================
    FORMS

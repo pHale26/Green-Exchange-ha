@@ -437,3 +437,60 @@ input:focus, textarea:focus, select:focus {
 /* Washi tape variants */
 .washi-tape-green { background: rgba(168, 197, 160, 0.7); }
 .washi-tape-tan { background: rgba(201, 169, 110, 0.7); }
+/* =============================================
+   ADVANCED ANIMATIONS FOR UPGRADED UI
+   ============================================= */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
+}
+
+@keyframes float-soft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-float-soft { animation: float-soft 4s ease-in-out infinite; }
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-stroke-green {
+    -webkit-text-stroke: 1px var(--forest-green);
+    color: transparent;
+}
+
+/* Exchange Arrows Animation */
+@keyframes dash-flow {
+    from { stroke-dashoffset: 20; }
+    to { stroke-dashoffset: 0; }
+}
+.animate-dash-flow {
+    stroke-dasharray: 8 4;
+    animation: dash-flow 1.5s linear infinite;
+}
+
+@keyframes slide-flow {
+    0%, 100% { transform: translate(-2px, -1px); }
+    50% { transform: translate(2px, 1px); }
+}
+.animate-slide-flow {
+    animation: slide-flow 3s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+    transform-origin: center;
+}
